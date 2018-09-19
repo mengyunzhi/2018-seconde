@@ -1,0 +1,32 @@
+.yellow{
+	background-color: yellow;
+}
+.blue{
+	background-color: blue;
+}
+.gray{
+	background-color: gray;
+}
+.orange{
+	background-color: orange;
+}
+.black{
+	background-color: black;
+}
+.padding{
+	padding-top: 10px;
+}
+.width{
+	width: 9.333333%
+}
+.orange{
+	background-color: orange;
+}
+.search {
+    display: inline-block;
+    width: 17px;
+    height: 20px;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+}
