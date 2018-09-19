@@ -1,0 +1,28 @@
+<ui-view>
+    <div class="row">
+        <div class="col-md-12 col-md-push-10">
+            <a class="btn btn-primary glyphicon glyphicon-plus" href="#!/klass/add">增加</a>
+        </div>
+    </div>
+    <br>
+    <table class="table table-bordered table-hover table-striped">
+        <tr align="center" class="info">
+            <td>序号</td>
+            <td>班级姓名</td>
+            <td>教师</td>
+            <td>操作</td>
+        </tr>
+        <tr align="center" ng-repeat="_Klass in data.content| orderBy:'-id'">
+            <td>{{$index + 1}}</td>
+            <td>{{_Klass.name}}</td>
+            <td>{{_Klass.teacher.name}}</td>
+            <td>
+                <a class="btn btn-sm btn-primary glyphicon glyphicon-facetime-video" href="#!/klass/view/{{_Klass.id}}">&nbsp查看</a>
+                <a class="btn btn-sm btn-primary glyphicon glyphicon-pencil" href="#!/klass/edit/{{_Klass.id}}">&nbsp编辑</a>
+                <button class="btn btn-danger btn-sm glyphicon glyphicon-trash" ng-click="delete(_Klass)">&nbsp删除</button>
+            </td>
+        </tr>
+    </table>
+    <list-page data-total-pages="data.totalPages" data-number="data.number" data-reload="reload"></list-page>
+    <pre>{{data | json}}</pre>
+</ui-view>
