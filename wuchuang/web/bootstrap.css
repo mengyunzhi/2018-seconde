@@ -1,0 +1,177 @@
+.yellow{
+	background-color: yellow;
+}
+.margin-bottom{
+	margin-bottom: 20px;
+}
+.padding-left{
+	padding-left: 33px;
+}
+.width{
+	width: 9.333333%;
+}
+.width1{
+	width: 10.666667%;
+}
+.font-size{
+	font-size: 13px;
+}
+.padding{
+	padding-top: 10px;
+}
+.size{
+	width: 60px; 
+	height: 60px;
+}
+.padding-top{
+	padding-top: 13px;
+}
+.size1{
+	height: 40px;
+	background-color: #f63; 
+	padding-top: 10px;
+    padding-left: 30px;
+    color: white;
+}
+.width2{
+	width: 488px;
+}
+.style4{
+	border-right: 0px white; 
+	background-color: #fff; 
+	line-height: 1px; 
+	border-left: 2px solid #f63; 
+	border-top: 2px solid #f63; 
+	border-bottom: 2px solid #f63;
+}
+.color{
+	color: #b9b6b6;
+}
+.style1{
+	border-left: 0px; 
+	height: 40px; 
+	border-top: 2px solid #f63; 
+	border-bottom: 2px solid #f63; 
+	border-right: 2px solid #f63; 
+	font-size: 12px; 
+	width: 79%;
+}
+.background-color{
+	background-color: #f63;
+}
+.color1{
+	color: #f6f0f0;
+}
+.padding-top1{
+	padding-top: 12px;
+}
+.width3{
+	width: 20%;
+}
+.search {
+    display: inline-block;
+    width: 17px;
+    height: 20px;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+}
+.color2{
+	background-color: black; 
+	color: white;
+}
+.all{
+	margin-right: 0px;
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.food1{
+	margin-right: 5px; 
+	padding-right: 0px;
+}
+.food2{
+	margin-right: -20px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.fun1{
+	margin-right: -4px; 
+	padding-right: 0px;
+}
+.fun2{
+	margin-right: 5px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.marry1{
+	margin-right: -10px; 
+	padding-right: 0px;
+}
+.movie1{
+	margin-right: -15px; 
+	padding-right: 0px;
+}
+.movie2{
+	margin-right: -20px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.cosmetology1{
+	margin-right: -4px; 
+	padding-right: 0px;
+}
+.cosmetology2{
+	margin-right: -20px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.hotel1{
+	margin-right: -8px; 
+	padding-right: 0px;
+}
+.hotel2{
+	margin-right: 5px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.play1{
+	margin-right: -14px; 
+	padding-right: 0px;
+}
+.play2{
+	margin-right: -10px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.sport{
+	margin-right: 0px; 
+	padding-right: 0px;
+}
+.teeth1{
+	margin-right: -13px; 
+	padding-right: 0px;
+}
+.teeth2{
+	margin-right: 4px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.pet{
+	margin-right: -13px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.cute{
+	width: 70px; 
+	height: 70px;
+}
+.size3{
+	width: 650px; 
+}
+.size4{
+	background-color: #f63; 
+    color: white;
+    width: 80px;
+    margin-left: 12px;
+    height: 23px;
+}

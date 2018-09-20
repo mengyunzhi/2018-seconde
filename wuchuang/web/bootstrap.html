@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row margin-bottom">
+            <div class="col-md-4"></div>
+            <div class="col-md-1 padding-left">
+                <p>写点评</p>
+            </div>
+            <div class="col-md-2 width1">
+                <p>你好，请登录</p>
+            </div>
+            <div class="col-md-1">
+                <p>免费注册</p>
+            </div>
+            <div class="dropdown col-md-1 width">
+                <div id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    个人中心
+                    <span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">我的点评</a></li>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">我的团购</a></li>
+                    <li><a href="#">我的部落</a></li>
+                    <li><a href="#">我的订座</a></li>
+                    <li><a href="#">我的设置</a></li>
+                    <li><a href="#">酒店订单</a></li>
+                </ul>
+            </div>
+            <div class="dropdown col-md-1 width">
+                <div id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    商务服务
+                    <span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">商务中心</a></li>
+                    <li><a href="#">商务合作</a></li>
+                    <li><a href="#">旺铺宝</a></li>
+                    <li><a href="#">招募餐饮代理</a></li>
+                    <li><a href="#">招募非餐饮代理</a></li>
+                </ul>
+            </div>
+            <div class="dropdown col-md-1 width">
+                <div id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    帮助中心
+                    <span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">平台规则</a></li>
+                    <li><a href="#">联系客服</a></li>
+                </ul>
+            </div>
+            <div class="dropdown col-md-1 width">
+                <div id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    网站导航
+                    <span class="caret"></span>
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#">平台规则</a></li>
+                    <li><a href="#">联系客服</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-md-push-11 font-size">
+                <p>手机点评</p><img src="app-qrcode-color.png" class="size" />
+            </div>
+            <div class="col-md-2">
+                <img src="logo.png" />
+            </div>
+            <div class="col-md-1 padding-top">
+                <p><span class="glyphicon glyphicon-map-marker">天津</span></p>
+            </div>
+            <div class="col-md-1 col-md-push-5 size1">
+                <p>搜索</p>
+            </div>
+            <div class="input-group width2">
+                <span class="input-group-addon style4" id="basic-addon1">
+                    <i class="glyphicon glyphicon-search search color"></i>
+                </span>
+                <input type="text" class="form-control style1" style="width: 79%" placeholder="搜索商务名、地址、菜名、外卖等" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-push-1 background-color">
+                <div class="row color">
+                    <div class="col-md-10 color1">
+                        <h4>全部分类</h4>
+                    </div>
+                    <div class="col-md-2">
+                        <span class="glyphicon glyphicon-th-list padding-top1 color1"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 col-md-push-1">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h4>团购</h4>
+                    </div>
+                    <div class="col-md-3 width3">
+                        <h4>霸王餐</h4>
+                    </div>
+                    <div class="col-md-3 width3">
+                        <h4>社区论坛</h4>
+                    </div>
+                    <div class="col-md-3 width3">
+                        <h4>预约订座</h4>
+                    </div>
+                    <div class="col-md-3 width3">
+                        <h4>2018必吃榜</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-push-1 color2">
+                <div class="row">
+                    <div class="col-md-3 food1">
+                        <strong><p>美食</p></strong>
+                    </div>
+                    <div class="col-md-4 food2">
+                        <p>火锅</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>人气聚餐</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 fun1">
+                        <strong><p>休闲娱乐</p></strong>
+                    </div>
+                    <div class="col-md-2 fun2">
+                        <p>足疗</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>KTV</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 marry1">
+                        <strong><p>结婚</p></strong>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>婚纱摄影</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>婚礼策划</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 movie1">
+                        <strong><p>电影演出赛事</p></strong>
+                    </div>
+                    <div class="col-md-4 movie2">
+                        <p>电影院</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 cosmetology1">
+                        <strong><p>丽人</p></strong>
+                    </div>
+                    <div class="col-md-4 cosmetology2">
+                        <p>美发</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>医学美容</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 hotel1">
+                        <strong><p>酒店</p></strong>
+                    </div>
+                    <div class="col-md-4 hotel2">
+                        <p>五星/豪华</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>经济连锁</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 hotel1">
+                        <strong><p>亲子</p></strong>
+                    </div>
+                    <div class="col-md-4 hotel2">
+                        <p>亲子摄影</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>早教中心</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 play1">
+                        <strong><p>周边游</p></strong>
+                    </div>
+                    <div class="col-md-3 play2">
+                        <p>景点</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>水上娱乐</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 sport">
+                        <strong><p>运动健身</p></strong>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>健身中心</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 marry1">
+                        <strong><p>购物</p></strong>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>综合商场</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>服饰鞋包</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 marry1">
+                        <strong><p>家装</p></strong>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>装修设计</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>定制家居</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 fun1">
+                        <strong><p>学习培训</p></strong>
+                    </div>
+                    <div class="col-md-2 fun2">
+                        <p>外语</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>音乐</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 fun1">
+                        <strong><p>生活服务</p></strong>
+                    </div>
+                    <div class="col-md-2 fun2">
+                        <p>快照</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>家政</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 teeth1">
+                        <strong><p>医疗健康</p></strong>
+                    </div>
+                    <div class="col-md-2 teeth2">
+                        <p>齿科</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>体检中心</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 food1">
+                        <strong><p>爱车</p></strong>
+                    </div>
+                    <div class="col-md-4 food2">
+                        <p>洗车</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>维护保养</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 food1">
+                        <strong><p>宠物</p></strong>
+                    </div>
+                    <div class="col-md-4 pet">
+                        <p>宠物店</p>
+                    </div>
+                    <div class="col-md-4 all">
+                        <p>宠物医院</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 col-md-push-1">
+                <!-- 滚动图 -->
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/3f335b0250c053c36f01b8ba690e2947.jpg" class="size3" style="height: 280px;" />
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/884198e6a510fae49ce930795efa7751.png" class="size3" style="height: 280px;" />
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/10b07c51a30af719ca30747522e27e38.jpg" class="size3" style="height: 280px;" />
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/d5a4c82e3f3e3d9c40fa4fed12e28ad6.jpg" class="size3" style="height: 280px;" />
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/6c840f0dc53604903cdded2ce337f108.jpg" class="size3" style="height: 280px;" />
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2 col-md-push-1">
+                <img src="//p1.meituan.net/mobilem/ff63f017a1363c29eef79f32cd39a46e5120.png" class="cute" style="margin-left: 29px;" />
+                <div class="row">
+                    <div class="col-md-3" style="padding-left: 49px;">
+                        <p>Hi,</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>晚上好</p>
+                    </div>
+                    <div class="col-md-12" style="color: gray; font-size: 12px;">
+                        <p>登陆大众点评，发现品质生活</p>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="button" class="btn btn-warning btn-small">（警告）Warning </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
