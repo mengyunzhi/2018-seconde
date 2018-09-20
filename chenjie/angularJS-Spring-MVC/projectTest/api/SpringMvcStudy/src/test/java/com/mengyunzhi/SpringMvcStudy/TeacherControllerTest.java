@@ -36,14 +36,20 @@ public class TeacherControllerTest {
 
         String url = "/Teacher/" + String.valueOf(teacher.getId());
         this.mockMvc
-                .perform(put (url))  //用put方法请求这个ur
+                .perform(get(url))  //用put方法请求这个ur
                 .andDo(print()) // 请求后，打印请求数据
                 .andExpect(status().isOk()); // 断言返回的状态为真
     }
 
     @Test
     public void  updateTest() throws Exception {
-        String url = "/Teacher/1";
+        // 添加测试数据
+        // 实例化一个Teacher并且持久化
+        Teacher teacher = new Teacher();
+        teacherRespository.save(teacher);
+
+        // 更新持久化的Teacher
+        String url = "/Teacher/" + teacher.getId();
         this.mockMvc
                 .perform(get(url)
                         .contentType(MediaType.APPLICATION_JSON_UTF8)

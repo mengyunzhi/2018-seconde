@@ -18,13 +18,13 @@ public class TeacherServiceImplTest {
     @Autowired TeacherService teacherService;
     @Autowired TeacherRespository teacherRespository; //教师表
     @Test
-    public void kupdateTest() throws Exception {
+    public void  updateTest() throws Exception {
         // 新建一个教师张三，并持久化
         Teacher zhangsanTeacher = new Teacher();
         zhangsanTeacher.setName("张三");
         zhangsanTeacher.setUsername("zhangsan");
         zhangsanTeacher.setSex(true);
-        zhangsanTeacher.setEmail("zhangsan@yunzhiclub.com");
+         zhangsanTeacher.setEmail("zhangsan@yunzhiclub.com");
         teacherRespository.save(zhangsanTeacher);
         Long id = zhangsanTeacher.getId();
 
