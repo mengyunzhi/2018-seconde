@@ -175,3 +175,64 @@
     margin-left: 12px;
     height: 23px;
 }
+.a{
+	color: black;
+}
+.a1{
+	color: white;
+}
+.fenlei1{
+	margin-top: 29px; 
+	margin-right: -48px; 
+	margin-left: 54px;
+}
+.fenlei2{
+	width: 23px; 
+	height: 23px;
+}
+.fenlei3{
+	margin-top: 20px; 
+	margin-left: 0px;
+}
+.shangquan1{
+	margin-top: 25px; 
+	margin-right: -44px;
+	margin-left: 42px;
+}
+.shangquan2{
+	width: 28px; 
+	height: 28px;
+}
+.shangquan3{
+	margin-top: 20px; 
+	margin-left: 0px;
+}
+.ditie1{
+	margin-top: 29px; 
+	margin-right: -48px; 
+	margin-left: 28px;
+}
+.ditie2{
+	width: 23px; 
+	height: 23px;
+}
+.ditie3{
+	margin-top: 20px; 
+	margin-left: 0px;
+}
+.paddingall1{
+	padding: 0px 0px 0px 24px; 
+	margin-top: 24px;
+}
+.paddingall2{
+	padding: 0px 0px 0px 24px; 
+	margin-top: 10px;
+}
+.paddingall3{
+	padding: 0px 0px 0px 16px; 
+	margin-top: 24px;
+}
+.paddingall4{
+	padding: 0px 0px 0px 16px; 
+	margin-top: 10px;
+}
