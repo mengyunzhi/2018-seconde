@@ -1,5 +1,8 @@
 package com.mengyunzhi.SpringMvcStudy;
 
+import com.mengyunzhi.SpringMvcStudy.repository.Teacher;
+import com.mengyunzhi.SpringMvcStudy.repository.TeacherRespository;
+import com.mengyunzhi.SpringMvcStudy.service.TeacherService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +18,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TeacherServiceImplTest {
-    @Autowired TeacherService teacherService;
-    @Autowired TeacherRespository teacherRespository; //教师表
+    @Autowired
+    TeacherService teacherService;
+    @Autowired
+    TeacherRespository teacherRespository; //教师表
     @Test
     public void  updateTest() throws Exception {
         // 新建一个教师张三，并持久化
@@ -44,5 +49,18 @@ public class TeacherServiceImplTest {
         assertThat(newTeacher.getUsername()).isEqualTo("lisi");
         assertThat(newTeacher.getEmail()).isEqualTo("lisi@yunzhiclub.com");
 
+    }
+
+    @Test
+    public void  deleteTest() throws Exception {
+        // 先添加一个数据
+        Teacher teacher = new Teacher();
+        teacherRespository.save(teacher);
+        Long id = teacher.getId();
+        // 再删除这个数据
+        teacherRespository.delete(id);
+        // 断言这个数据删除已成功
+        Teacher newTeacher = teacherRespository.findOne(id);
+        assertThat(newTeacher).isNull();
     }
 }

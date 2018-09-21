@@ -1,5 +1,7 @@
 package com.mengyunzhi.SpringMvcStudy;
 
+import com.mengyunzhi.SpringMvcStudy.repository.Teacher;
+import com.mengyunzhi.SpringMvcStudy.repository.TeacherRespository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,8 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -23,6 +27,15 @@ public class TeacherControllerTest {
 
     @Autowired
     TeacherRespository teacherRespository;
+
+    @Test
+    public void getAllTest() throws Exception {
+        String url = "/Teacher";
+        this.mockMvc
+                .perform(get(url))  //用put方法请求这个ur
+                .andDo(print()) // 请求后，打印请求数据
+                .andExpect(status().isOk()); // 断言返回的状态为真
+    }
 
     @Test
     public void getTest() throws Exception {
@@ -56,5 +69,23 @@ public class TeacherControllerTest {
                         .content("{}"))  //用get方法请求这个url
                 .andDo(print()) // 请求后，打印请求数据
                 .andExpect(status().isOk()); // 断言返回的状态为真
+    }
+
+    @Test
+    public  void  deleteTest() throws Exception {
+        // 先添加一个数据
+        Teacher teacher = new Teacher();
+        teacherRespository.save(teacher);
+        Long id = teacher.getId();
+        // 再删除这个数据
+        String url = "/Teacher/" + teacher.getId();
+        this.mockMvc
+                .perform(delete(url)
+                        .contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andDo(print()) // 请求后，打印请求数据
+                .andExpect(status().isOk()); // 断言返回的状态为真
+        // 断言这个数据删除已成功
+        Teacher newTeacher = teacherRespository.findOne(id);
+        assertThat(newTeacher).isNull();
     }
 }

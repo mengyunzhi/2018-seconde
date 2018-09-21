@@ -1,4 +1,4 @@
-package com.mengyunzhi.SpringMvcStudy;
+package com.mengyunzhi.SpringMvcStudy.repository;
 
 import org.springframework.data.repository.CrudRepository;
 

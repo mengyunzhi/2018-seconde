@@ -21,8 +21,9 @@
       <td>{{teacher.email}}</td>
       <td>{{teacher.sex}}</td>
       <td>
-        <a href="#!/main/view/{{teacher.id}}">查看</a>
-        <a href="#!/main/edit/{{teacher.id}}">编辑</a>
+        <a class="btn btn-primary" href="#!/main/view/{{teacher.id}}">查看</a>
+        <a class="btn btn-primary" href="#!/main/edit/{{teacher.id}}">编辑</a>
+        <button class="btn btn-danger" ng-click="delete(teacher)">删除</button>
       </td>
     </tr>
   </table>

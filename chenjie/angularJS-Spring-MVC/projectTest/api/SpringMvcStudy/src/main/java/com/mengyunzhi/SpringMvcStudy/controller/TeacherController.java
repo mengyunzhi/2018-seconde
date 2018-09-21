@@ -1,5 +1,8 @@
-package com.mengyunzhi.SpringMvcStudy;
+package com.mengyunzhi.SpringMvcStudy.controller;
 
+import com.mengyunzhi.SpringMvcStudy.service.TeacherService;
+import com.mengyunzhi.SpringMvcStudy.repository.Teacher;
+import com.mengyunzhi.SpringMvcStudy.repository.TeacherRespository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,8 +12,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController//声明一个控制器
 @RequestMapping("/Teacher")//声明一个路由地址
 public class TeacherController {
-    @Autowired TeacherRespository teacherRespository; //自动装置一个实例化的TeacherTrspository
-    @Autowired TeacherService teacherService; // 自动装配教师
+    @Autowired
+    TeacherRespository teacherRespository; //自动装置一个实例化的TeacherTrspository
+    @Autowired
+    TeacherService teacherService; // 自动装配教师服务
 
     //新增一个地址为：/Teacher的GET方法对应的action
     @GetMapping("")
@@ -38,6 +43,12 @@ public class TeacherController {
     public void update(@PathVariable Long id, @RequestBody Teacher teacher) {
         teacherService.update(id, teacher);
         return;
+    }
+
+    //定义一个delete路由来删除数据
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        teacherService.delete(id);
     }
 
 }

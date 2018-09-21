@@ -1,4 +1,4 @@
-package com.mengyunzhi.SpringMvcStudy;
+package com.mengyunzhi.SpringMvcStudy.repository;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +7,7 @@ import javax.persistence.Id;
 
 /**
  * @author 陈杰 on 2018/09/11
+ * 教师表
  */
 @Entity
 public class Teacher {

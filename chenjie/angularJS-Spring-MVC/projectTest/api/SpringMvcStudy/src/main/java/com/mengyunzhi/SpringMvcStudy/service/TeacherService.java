@@ -1,4 +1,6 @@
-package com.mengyunzhi.SpringMvcStudy;
+package com.mengyunzhi.SpringMvcStudy.service;
+
+import com.mengyunzhi.SpringMvcStudy.repository.Teacher;
 
 /**
  * 教师
@@ -11,4 +13,6 @@ public interface TeacherService {
      * @param teacher
      */
     void update(Long id, Teacher teacher);
+
+    void delete(Long id);
 }

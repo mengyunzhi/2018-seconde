@@ -1,5 +1,7 @@
-package com.mengyunzhi.SpringMvcStudy;
+package com.mengyunzhi.SpringMvcStudy.service;
 
+import com.mengyunzhi.SpringMvcStudy.repository.Teacher;
+import com.mengyunzhi.SpringMvcStudy.repository.TeacherRespository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +11,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class TeacherServiceImpl implements TeacherService {
-    @Autowired TeacherRespository teacherRespository; // 教师仓库
+    @Autowired
+    TeacherRespository teacherRespository; // 教师仓库
     /**
      * 更新实体
      * @param id 被更新的实体ID
@@ -27,5 +30,10 @@ public class TeacherServiceImpl implements TeacherService {
         //更新数据表
         teacherRespository.save(oldTeacher);
         return;
+    }
+
+    @Override
+    public void delete(Long id) {
+        teacherRespository.delete(id);
     }
 }
