@@ -3,64 +3,292 @@
 
 <head>
     <title>大众点评</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
+    </script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-6">
-                <div class="row">
-                    <div class="col-md-3">写点评</div>
-                    <div class="col-md-3">你好，请登录</div>
-                    <div class="col-md-2">
-                        <form action="">
-                            <select name="cars">
-                                <option value="个人中心">个人中心</option>
-                                <option value="我的收藏">我的收藏</option>
-                                <option value="我的点评">我的点评</option>
-                                <option value="我的设置">我的设置</option>
-                            </select>
-                        </form>
-                    </div>
-                    <div class="col-md-2">
-                        <form action="">
-                            <select name="cars">
-                                <option value="帮助中心">帮助中心</option>
-                                <option value="我的客服">我的客服</option>
-                            </select>
-                        </form>
-                    </div>
-                    <div class="col-md-2">
-                        <form action="">
-                            <select name="cars">
-                                <option value="网站导航">网站导航</option>
-                                <option value="大众点评">大众点评</option>
-                            </select>
-                        </form>
+        <!--这是第一行表头-->
+        <div class="top-nav">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-6">
+                    <div class="row">
+                        <div class="col-md-3">写点评</div>
+                        <div class="col-md-3">你好，请登录</div>
+                        <div class="col-md-2">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    个人中心
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>我的点评</li>
+                                    <li>我的收藏</li>
+                                    <li>个人设置</li>
+                                    <li>我的购物</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    帮助中心
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>帮助中心</li>
+                                    <li>我的客服</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    网站导航
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>网站导航</li>
+                                    <li>大众点评</li>
+                                    <li>个人设置</li>
+                                    <li>我的购物</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!--表头结束，第二行，无内容-->
         <div class="row">
-            <div class="col-md-2 col-md-1 col-md-8 col-md-1">
-                <div class="col-md-2">
-                    <img src="搜狗截图20180921210930.png" />
+            <div class="col-lg-12">.
+            </div>
+        </div>
+        <!--第三行-->
+        <div class="row">
+            <div class="col-md-2">
+                <img src="搜狗截图20180921210930.png" style="width: 200px;height: 65px" />
+            </div>
+            <!--地址-->
+            <div class="col-md-1">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        天津
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li>河北</li>
+                        <li>北京</li>
+                        <li>上海</li>
+                        <li>河南</li>
+                        <li>上海</li>
+                        <li>广东</li>
+                        <li>湖南</li>
+                        <li>湖北</li>
+                    </ul>
                 </div>
-                <div class="col-md-1">
-                    <div class="dropdown">
-                        <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            天津
-                            <span class="caret"></span>
+            </div>
+            <!--搜索框-->
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="搜索商户名，地址，外卖等" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" style="background-color: #FF6B34;width:120px;height: 38px">搜索
                         </button>
-                        <ul class="dropdown-menu" aria-labelledby="dLabel">
-                            <li>天津</li>
-                            <li>北京</li>
-                        </ul>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-2 col-md-offset-1">
+                <img src="搜狗截图20180923084955.png" style="width: 100px;height: 80px" />
+                <div id="logo-input" class="logo-input">
+                </div>
+            </div>
+            <!--这是搜索框下面的内容-->
+            <div class="row">
+                <div class="col-lg-6 col-md-offset-3">
+                    <div style="color: #D3D3D3">
+                        <div>
+                            大家都在搜: 大悦城 天和城 爱琴海 王婆大虾 好利来
+                        </div>
                     </div>
                 </div>
             </div>
+            <!--以下是导航框-->
+            <div class="row">
+                <div class="col-md-2" style="background-color:#FF6B34">
+                    <h4>
+                		全部分类
+                		<i class="pull-right glyphicon glyphicon-th-list"></i>
+                	</h4>
+                </div>
+                <div class="col-lg-6 col-md-offset-1">
+                    <ul class="nav nav-tabs">
+                        <li role="presentation" class="active"><a href="#">
+                    	<strong>团购</strong></a></li>
+                        <li role="presentation"><a href="#"><strong>霸王餐</strong></a></li>
+                        <li role="presentation"><a href="#"><strong>社区论坛</strong></a></li>
+                        <li role="presentation"><a href="#"><strong>预约订座</strong></a></li>
+                        <li role="presentation"><a href="#"><strong>2018必吃榜</strong></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--以下是黑色框部分各种选项-->
+            <div class="row">
+                <div class="col left-column col-md-2" style="background-color:#000000; color:#FFFFFF">
+                    <div class="sidebar-box gallery-list">
+                        <div class="design" id="leftcolumn">
+                            <h4>
+                            		美食
+                            		<small>
+	                            		火锅 人气聚餐
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		休闲娱乐
+                            		<small>
+	                            		足疗 KTV
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		结婚
+                            		<small>
+	                            		婚纱摄影 婚礼策划
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		电影演出赛事
+                            		<small>
+	                            		电影院
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		丽人
+                            		<small>
+	                            		美发 医学美容
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		酒店
+                            		<small>
+	                            		五星豪华 经济连锁
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		亲子
+                            		<small>
+	                            		亲子摄影 早教中心
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		周边游
+                            		<small>
+	                            		景点 水上娱乐
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		运动健身
+                            		<small>
+	                            		健身中心
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		购物
+                            		<small>
+	                            		综合商场 鞋包服饰
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		家装
+                            		<small>
+	                            		装修设计 定制家具
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		学习培训
+                            		<small>
+	                            		外语 音乐
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		生活服务
+                            		<small>
+	                            		快照 家政
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		医疗健康
+                            		<small>
+	                            		齿科 体检中心
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		爱车
+                            		<small>
+	                            		洗车 维修保养
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		宠物
+                            		<small>
+	                            		宠物店 宠物医院
+	                            	</small>
+                            	</h4>
+                            <h4>
+                            		宠物
+                            		<small>
+	                            		宠物店 宠物医院
+	                            	</small>
+                            	</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- 以下是轮流播放图片 -->
+                <div class="col-lg-8">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/884198e6a510fae49ce930795efa7751.png" alt="天津vip特权" />
+                            </div>
+                            <div class="item">
+                                <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/10b07c51a30af719ca30747522e27e38.jpg" alt="必吃榜套餐" />
+                            </div>
+                            <div class="item">
+                                <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/d5a4c82e3f3e3d9c40fa4fed12e28ad6.jpg" alt="必吃榜美食游乐园" />
+                            </div>
+                            <div class="item">
+                                <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/b1720317d22829a9278e919148ec321b.png" alt="全国爱牙日" />
+                            </div>
+                            <div class="item">
+                                <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/d5a4c82e3f3e3d9c40fa4fed12e28ad6.jpg" alt="必吃榜美食游乐园" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 以下是白色框内选项 -->
+                    <div class="row">
+                    	<div class="col-md-4">
+                    		<p1>热门分类
+                    		</p1>
+                    	</div>
+                    		
+                    	</div>
+                    	
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
