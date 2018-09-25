@@ -27,11 +27,12 @@
           templateUrl: 'views/main.html'
         })
 
+        //配置klass路由
         .state({
-          name: 'about',
-          url: '/about',
-          templateUrl: 'views/about.html',
-          controller: 'AboutCtrl'
+          name: 'klass',
+          url: '/klass',
+          templateUrl: 'views/klass/index.html',
+          controller: 'KlassIndexCtrl'
         })
 
         //配置Add路由
@@ -56,6 +57,21 @@
           url: '/edit/:id',
           controller: 'MainEditCtrl',
           templateUrl: 'views/main/edit.html'
-        }); 
+        })
+
+        //配置delete路由
+        .state({
+          name: 'main.delete',
+          url: '/delete/:id',
+          controller: 'MainDeleteCtrl'
+        })
+
+        //配置klass/Add路由
+        .state({
+          name: 'klass.add',
+          url: '/add',
+          controller: 'KlassAddCtrl',
+          templateUrl: 'views/klass/add.html'
+        });
       $urlRouterProvider.otherwise('/main');
     });

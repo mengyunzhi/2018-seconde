@@ -1,4 +1,4 @@
-package com.mengyunzhi.SpringMvcStudy;
+package com.mengyunzhi.SpringMvcStudy.service;
 
 import com.mengyunzhi.SpringMvcStudy.repository.Teacher;
 import com.mengyunzhi.SpringMvcStudy.repository.TeacherRespository;
