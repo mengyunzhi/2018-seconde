@@ -23,7 +23,7 @@ class TeacherController extends Controller
 		$Teacher->username = $postData['username'];
 		$Teacher->sex = $postData['sex'];
 		$Teacher->email = $postData['email'];
-		// 成功返回‘1’，不是返回'true'，失败返回‘false’
+		// 成功返回‘1’，而不是返回'true'，失败返回‘false’
 		$result = $Teacher->validate(true)->save();
 		 var_dump($result);
 
