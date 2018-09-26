@@ -1,21 +1,19 @@
 <div class="row">
-  <col-md-8>
-    <!-- <pre>{{teacher | json}}</pre> -->
+  <div class="col-md-8">
+    <!-- <pre>{{teachers | json}}</pre> -->
+    <pre>{{klass | json}}</pre>
     <form class="form-horizontal" ng-submit="submit()">
       <div class="form-group">
-        <label for="username" class="col-sm-2 control-label">名称</label>
+        <label for="name" class="col-sm-2 control-label">名称</label>
         <div class="col-sm-10">
-          <input type="text" ng-model="teacher.username" class="form-control" id="username" placeholder="名称">
+          <input type="text" ng-model="klass.name" class="form-control" id="name" placeholder="班级名称">
         </div>
       </div>
       <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">姓名</label>
+        <label for="teacherId" class="col-sm-2 control-label">教师</label>
         <div class="col-sm-10">
-          <select name="" id="">
-          	<option value="">1</option>
-          </select>
+          <select name="teacherId" id="teacherId" ng-options="_teacher.name for _teacher in teachers track by _teacher.id" ng-model="klass.teacher"></select>
         </div>
-      </div>
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
@@ -23,5 +21,5 @@
         </div>
       </div>
     </form>
-  </col-md-8>
+  </div>
 </div>

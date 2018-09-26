@@ -21,12 +21,13 @@ angular.module('webApp')
     };
 
     self.submit = function() {
+       
     	//进行数据的提交
     	var url = 'http://127.0.0.1:8080/Teacher/';
     	$http.post(url,$scope.teacher)
     	.then(function success(response) {
             //进行跳转
-    		$state.go('main',{},{reload: true});
+    		$state.transitionTo('main',{},{reload: true});
     		console.log('addSuccess');
     	}, function error(response) {
     		console.log('addError');
