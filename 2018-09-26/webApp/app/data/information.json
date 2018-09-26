@@ -1,0 +1,23 @@
+[{
+    "id": 1,
+    "username": "panjiaqi",
+    "name": "潘佳琦",
+    "sex": "男",
+    "email": "527046973@qq.com"
+
+    },
+    {
+    "id": 2,
+    "username": "zhangsan",
+    "name": "张三",
+    "sex": "男",
+    "email": "123zhangsan@yunzhi.club"
+    },
+    {
+    "id": 3,
+    "username": "wnagwu",
+    "name": "王五",
+    "sex": "女",
+    "email": "123wangwu@yunzhi.club"
+    }
+]
