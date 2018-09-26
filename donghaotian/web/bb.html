@@ -1,52 +1,88 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<title>Document</title>
-	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
-
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Document</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <style>
-	a {
-		color: black;
-	}
-	a:hover{
-		color: orange;
-		text-decoration:none;/*指鼠标在链接*/
+a {
+    color: black;
 }
+
+a:hover {
+    color: orange;
+    text-decoration: none;
+    /*指鼠标在链接*/
+}
+
 .orange {
-	color: orange;
+    color: orange;
 }
+
 .gray {
-	background: #f6f6f6;
+    background: #f6f6f6;
+}
+
+.white {
+    background: #fff;
+}
+
+p {
+    margin: 9px 28px 10px;
 }
 </style>
 
 <body class="container-fluid">
-	<div class="row">
-		<div class="col-md-12 gray">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-				<ul class="nav nav-pills pull-right">
-					<li role="presentation"><a href="#">写点评 |</a></li>
-					<li role="presentation"><a href="#">你好，请登录</a> </li>
-					<li role="presentation"><a href="#" class="orange">免费注册 |</a></li>
-					<li role="presentation"><a href="#">个人中心 |</a></li>
-					<li role="presentation"><a href="#">商务服务 |</a></li>
-					<li role="presentation"><a href="#">帮助中心 |</a></li>
-					<li role="presentation"><a href="#">网站导航 |</a></li>
-			</ul>
-			</div>
-		</div>
-	</div>
-		</div>
-	</div>
-	
+    <div class="row gray">
+        <div class="col-md-offset-5 ">
+            <ul class="nav nav-pills -right">
+                <li role="presentation"><a href="#">写点评 |</a></li>
+                <li role="presentation"><a href="#">你好，请登录</a> </li>
+                <li role="presentation"><a href="#" class="orange">免费注册 |</a></li>
+                <li role="presentation"><a href="#">个人中心 |</a></li>
+                <li role="presentation"><a href="#">商务服务 |</a></li>
+                <li role="presentation"><a href="#">帮助中心 |</a></li>
+                <li role="presentation"><a href="#">网站导航 |</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div class="row  white">
+        <div class="col-md-1 col-md-push-1">
+            <img src="http://www.dpfile.com/app/pc-common/i/logo.png" title="大众点评网" />
+        </div>
+        <div class="col-md-1 col-md-push-2">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAC0ElEQVR4Xu2Z33HTQBDGdyV4JlQAVIBiFxBTAaGCmBni4Q1SAU4FhDdGYganAkwFiQuwOCqAEswroFvmJNmjRLL+xbfWoNVjsqe7/e333e3JCD1/sOf5gwAQBfScgFig5wKQTVAsIBboOQGxQM8FIKeAWEAs0HMCYoGeC2A/pwCNvQO4B0fgOF5cAK0V/IUFztSKuyCsFqBTzwNw3wPCqDBRohm4+hw/qp9cINgA0OlgDIifKxMjMio4wyCcVcbuIIAFQO3kswkRveSAYB0AvfYeg3Z/NC6WUYKrD23bwT6AydBI+aQxgGTAJfrLccuxtYZxADCefpBfDZ2jH07N31OLXOTiiFYYhA9rZdIyyCqAEvnnKkuTwRQA3+XycKInNm1gF4A59tD9VlD9M/RDU/HNQ6+8ETjuVS6WokMMlGpZ4MphVgHE8p4MKZ8UfcAgfHsDwJZjEv2l1TVafXni7+EcEJ7nIOjoGX5S10mMaZCcK0A8uBFH8BWD5XFlGe8QYB/ANmnHmYOR9mprZ5iBdIccS4daB5Du8teAeNQoCaIFBmFxy9zoReXBTAC2bYYli7O8+69nZgGQquACEN/UKh7lN8la41oE8QEwV+D7jgLER+XrpO/wW4+4rsZsAGIVlG2IayqWz/3b8FkBVFuBcg1SC1U3GsIOIGmOBgoAn3Kf+UVk9gMgaZFNE5Reknh9nwWxFwCJCoamw/sCAL+AopHNfr/ME3sDsNkPSM/XLXEj8+4omBVAfAqgcwKkL28nXfa/HeVa+Bo2ABnJA8QfPnEKoNNrrvk8TtPMZegF+su5zcT5O8GkEZpX3gmIFvBHH/+XjVDs++Qjqal48qPI5kEFTqRsfv3pzDHIIe26c7DtAXUXxB0nALiJd20+UUDXKsK9HlEAN/GuzScK6FpFuNcjCuAm3rX5RAFdqwj3ekQB3MS7Np8ooGsV4V5P7xXwD59n7UFy3pdvAAAAAElFTkSuQmCC" style="width :30px; height:35px;">
+        </div>
+        <div class="col-md-1 col-md-push-1">
+            <p>天津</p>
+        </div>
+        <div class="col-md-3 col-md-push-1 ">
+            <div class="input-group " style="width:123%; ">
+                <input type="text" class="form-control " style="border-color: #f63;border-width: 2px; " placeholder="搜索商户名、地址、菜名、外卖等" aria-describedby="basic-addon2">
+                <p style="color:#555;">大家都在搜:大悦城 天河城 爱琴海 王婆大虾 好利来 星巴克</p>
+            </div>
+        </div>
+        <div class="col-md-1 col-md-push-1">
+            <div class="col-md-1 col-md-push-4">
+                <p>
+                    <button type="button" class="btn btn-default" style="background-color: #f63;margin-left: -27px;margin-top: -9px;border-color: #f63;border-width: 2px;width: 109px;color:white;">搜索</button>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-2 col-md-push-3 text-left">
+        	<p style="margin-left: 5px;">手机点评</p>
+        	<img src="http://www.dpfile.com/app/pc-common/i/app-qrcode-color.png" style="width: 70px;height: 75px;border:solid #FFF4DF;">
+        	
+        </div>
+    </div>
+    </div>
+    </div>
 </body>
+
 </html>
