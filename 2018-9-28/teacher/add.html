@@ -1,0 +1,28 @@
+<ui-view>
+    <div class="row">
+        <form ng-submit="addTeacher(data)">
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" class="form-control" id="username" placeholder="please enter your Username" ng-model="data.username">
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" class="form-control" id="password" placeholder="please enter your Password" ng-model="data.password">
+            </div>
+            <div class="form-group">
+                <label for="email">邮箱</label>
+                <input type="email" class="form-control" id="email" placeholder="please enter your email" ng-model="data.email">
+            </div>
+            <div class="form-group">
+                <label for="sex">性别</label>
+                <div class="col-md-10">
+                    <select ng-model="data.sex" id="sex">
+                        <option value="true">male</option>
+                        <option value="false">female</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</ui-view>
