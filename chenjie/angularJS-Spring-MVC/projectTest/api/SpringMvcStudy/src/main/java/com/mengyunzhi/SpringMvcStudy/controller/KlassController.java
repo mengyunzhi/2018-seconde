@@ -1,6 +1,6 @@
 package com.mengyunzhi.SpringMvcStudy.controller;
 
-import com.mengyunzhi.SpringMvcStudy.repository.Klass;
+import com.mengyunzhi.SpringMvcStudy.entity.Klass;
 import com.mengyunzhi.SpringMvcStudy.repository.KlassRepository;
 import com.mengyunzhi.SpringMvcStudy.service.KlassService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +45,6 @@ public class KlassController {
 
     //定义一个delete路由来删除数据
     @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable Long id) {
         klassService.delete(id);
     }

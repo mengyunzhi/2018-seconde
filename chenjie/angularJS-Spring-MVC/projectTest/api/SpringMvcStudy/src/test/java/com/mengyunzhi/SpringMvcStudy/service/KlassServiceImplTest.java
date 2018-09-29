@@ -1,23 +1,15 @@
 package com.mengyunzhi.SpringMvcStudy.service;
 
-import com.mengyunzhi.SpringMvcStudy.repository.Klass;
+import com.mengyunzhi.SpringMvcStudy.entity.Klass;
 import com.mengyunzhi.SpringMvcStudy.repository.KlassRepository;
-import com.mengyunzhi.SpringMvcStudy.repository.Teacher;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.servlet.MockMvc;
-
 import java.util.List;
 import java.util.logging.Logger;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+
 public class KlassServiceImplTest extends ServiceTest {
     private final static Logger logger = Logger.getLogger(KlassServiceImplTest.class.getName());
     @Autowired

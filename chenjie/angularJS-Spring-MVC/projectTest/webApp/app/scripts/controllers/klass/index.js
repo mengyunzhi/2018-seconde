@@ -9,11 +9,11 @@
  * 班级管理首页 
  */
 angular.module('webApp')
-  .controller('KlassIndexCtrl', function($scope,$http,$state) {
+  .controller('KlassIndexCtrl', function($scope, $http, $state, klass) {
     var self = this;
     self.init = function() {
       //定义url请求地址
-      var url = 'http://127.0.0.1:8080/Klass/';
+      var url = '/Klass/';
       
       $http.get(url)
         .then(function success(response) {

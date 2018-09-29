@@ -2,26 +2,25 @@
 
 /**
  * @ngdoc function
- * @name webApp.controller:MainEditCtrl
+ * @name webApp.controller:KlassEditCtrl
  * @description
- * # MainEditCtrl
+ * # KlassEditCtrl
  * Controller of the webApp
- * 教师管理 编辑
- * 陈杰
  */
 angular.module('webApp')
-  .controller('MainEditCtrl', function($stateParams, $http, $scope,$state) {
+  .controller('KlassEditCtrl', function($http, $state, $stateParams, $scope) {
     var self = this;
     self.init = function() {
-      //根据ID实例化要编辑的Teacher
+      //根据ID实例化要编辑的Klass
       var id = $stateParams.id;
       //使用这个ID去请求信息
-      var url = '/Teacher/' + id;
+      var url = '/Klass/' + id;
+
       $http.get(url)
         .then(function success(response) {
           console.log('editSuccess');
           //将请求来的信息绑定给V层
-          $scope.teacher = response.data;
+          $scope.klass = response.data;
 
         }, function error(response) {
           console.log(url + 'editError');
@@ -31,18 +30,17 @@ angular.module('webApp')
 
     self.submit = function() {
       var id = $stateParams.id;
-      var url = '/Teacher/' + id;
-      $http.put(url, $scope.teacher)
-      	.then(function success(response) {
-      		//进行跳转
-    		$state.transitionTo('main',{},{reload: true});
-      		console.log("updatasuccess");
-      	}, function error(response) {
-      		console.log("updataerror");
-      	});
+      var url = '/Klass/' + id;
+      $http.put(url, $scope.klass)
+        .then(function success(response) {
+          //进行跳转
+          $state.transitionTo('klass', {}, { reload: true });
+          console.log("updatasuccess");
+        }, function error(response) {
+          console.log("updataerror");
+        });
     };
 
     self.init();
     $scope.submit = self.submit;
-
   });

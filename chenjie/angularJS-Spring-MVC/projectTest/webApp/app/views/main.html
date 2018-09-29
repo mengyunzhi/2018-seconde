@@ -5,26 +5,30 @@
     </div>
   </div>
   <br />
-  <table class="table table-striped">
-    <tr>
-      <td>序号</td>
-      <td>用户名</td>
-      <td>姓名</td>
-      <td>邮箱</td>
-      <td>性别</td>
-      <td>操作</td>
-    </tr>
-    <tr ng-repeat="(key,teacher) in teachers">
-      <td>{{key}}</td>
-      <td>{{teacher.username}}</td>
-      <td>{{teacher.name}}</td>
-      <td>{{teacher.email}}</td>
-      <td>{{teacher.sex}}</td>
-      <td>
-        <a class="btn btn-primary" href="#!/main/view/{{teacher.id}}">查看</a>
-        <a class="btn btn-primary" href="#!/main/edit/{{teacher.id}}">编辑</a>
-        <button class="btn btn-danger" ng-click="delete(teacher)">删除</button>
-      </td>
-    </tr>
-  </table>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <tr>
+          <td>序号</td>
+          <td>用户名</td>
+          <td>姓名</td>
+          <td>邮箱</td>
+          <td>性别</td>
+          <td>操作</td>
+        </tr>
+        <tr ng-repeat="(key,teacher) in teachers| orderBy: '-id'" ng-hide="teacher._delete">
+          <td>{{key}}</td>
+          <td>{{teacher.username}}</td>
+          <td>{{teacher.name}}</td>
+          <td>{{teacher.email}}</td>
+          <td>{{teacher.sex}}</td>
+          <td>
+            <a class="btn btn-primary" href="#!/main/view/{{teacher.id}}">查看</a>
+            <a class="btn btn-primary" href="#!/main/edit/{{teacher.id}}">编辑</a>
+            <button class="btn btn-danger" ng-click="delete(teacher)">删除</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </ui-view>

@@ -2,33 +2,30 @@
 
 /**
  * @ngdoc function
- * @name testApp.controller:MainViewCtrl
+ * @name webApp.controller:KlassViewCtrl
  * @description
- * # MainViewCtrl
- * Controller of the testApp
+ * # KlassViewCtrl
+ * Controller of the webApp
  */
 angular.module('webApp')
-  .controller('MainViewCtrl', function($stateParams, $http,$scope) {
+  .controller('KlassViewCtrl', function($stateParams, $scope, $http) {
     var self = this;
     self.init = function() {
       //接受ID
       var id = $stateParams.id;
       //使用这个ID去请求信息
-      var url = '/Teacher/' + id;
+      var url = '/Klass/' + id;
       $http.get(url).
       then(function success(response) {
-        console.log('viewSuccess');
         //将请求来的信息绑定给V层
-        $scope.teacher = response.data;
-        
+        $scope.klass = response.data;
+        console.log(response);
+
       }, function error(response) {
         console.log(url + 'viewError');
         console.log(response);
       });
-
     };
 
-    //调用init方法来初始化
     self.init();
-    
   });

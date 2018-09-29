@@ -1,35 +1,29 @@
 package com.mengyunzhi.SpringMvcStudy.service;
 
-import com.mengyunzhi.SpringMvcStudy.repository.Teacher;
+import com.mengyunzhi.SpringMvcStudy.entity.Teacher;
 import com.mengyunzhi.SpringMvcStudy.repository.TeacherRespository;
-import com.mengyunzhi.SpringMvcStudy.service.TeacherService;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 
 /**
- *  @author 某杰
+ * @author 某杰
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class TeacherServiceImplTest {
+public class TeacherServiceImplTest extends ServiceTest {
     @Autowired
     TeacherService teacherService;
     @Autowired
     TeacherRespository teacherRespository; //教师表
+
     @Test
-    public void  updateTest() throws Exception {
+    public void updateTest() throws Exception {
         // 新建一个教师张三，并持久化
         Teacher zhangsanTeacher = new Teacher();
         zhangsanTeacher.setName("张三");
         zhangsanTeacher.setUsername("zhangsan");
         zhangsanTeacher.setSex(true);
-         zhangsanTeacher.setEmail("zhangsan@yunzhiclub.com");
+        zhangsanTeacher.setEmail("zhangsan@yunzhiclub.com");
         teacherRespository.save(zhangsanTeacher);
         Long id = zhangsanTeacher.getId();
 
@@ -52,7 +46,7 @@ public class TeacherServiceImplTest {
     }
 
     @Test
-    public void  deleteTest() throws Exception {
+    public void deleteTest() throws Exception {
         // 先添加一个数据
         Teacher teacher = new Teacher();
         teacherRespository.save(teacher);

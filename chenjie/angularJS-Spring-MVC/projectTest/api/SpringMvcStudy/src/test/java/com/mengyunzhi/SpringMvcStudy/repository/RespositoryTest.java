@@ -1,15 +1,13 @@
-package com.mengyunzhi.SpringMvcStudy.service;
+package com.mengyunzhi.SpringMvcStudy.repository;
 
 import com.mengyunzhi.SpringMvcStudy.SpringMvcStudyApplicationTests;
 import org.junit.Test;
 
-
 /**
  * @author chenjie
- * @date 2018/9/25 21:49
+ * @date 2018/9/29 15:30
  */
-
-public class ServiceTest extends SpringMvcStudyApplicationTests {
+public class RespositoryTest extends SpringMvcStudyApplicationTests {
     @Test
     public void test() {
     }
