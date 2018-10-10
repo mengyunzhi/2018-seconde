@@ -2,6 +2,7 @@
 namespace app\index\controller;
 use think\Controller;		//V层进行数据传递    
 use app\common\model\Teacher;      // 教师模型
+use think\Request;
 /**
  * 教师管理   继承think\Controller后就可以用V层对数据包装了
  */
@@ -29,22 +30,32 @@ class TeacherController extends Controller
      */
     public function insert()
     {
+        //接受传入数据
+        $postData = Request::instance()->post();
+
     	//实例化Teacher为空对象
     	$Teacher = new Teacher();
 
     	//为对象赋值
-    	$Teacher['name'] = '王五';
-    	$Teacher['username'] = 'wangwu';
-    	$Teacher['sex'] = '1';
-    	$Teacher['email'] = 'wangwu@yunzhi.club';
+    	$Teacher->name = $postData['name'];
+        $Teacher->username = $postData['username'];
+        $Teacher->sex = $postData['sex'];
+        $Teacher->email = $postData['email'];
 
-    	//执行对象的插入数据操作
-    	$Teacher->save();
-    	return $Teacher->name . '成功添加。新增ID为:' . $Teacher->id;
+        //新增对象至数据表
+        $result = $Teacher->validate(ture)->save($Teacher->getData());
+
+        //反馈结果
+        if(false === $result)
+        {
+            return '新增失败:' . $Teacher->getError();
+        } else{
+            return '新增成功。新增ID为:' . $Teacher->id;
+        }
     }
-
     public function add()
     {
-    	return 'hello add';
+        $htmls = $this->fetch();
+        return $htmls;
     }
 }
