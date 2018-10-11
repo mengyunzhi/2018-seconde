@@ -112,6 +112,7 @@ class TeacherController extends IndexController
 			return $e->getMessage();
 		}
 	}
+	//三种方法
 	public function update()
 	{
 		try {
