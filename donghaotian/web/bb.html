@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Document</title>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="bootstrap.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <style>
-    a {
+a {
     color: black;
 }
 
@@ -43,14 +43,26 @@ p {
 	background: #383131;
 }
 
-#menu > div > h4 {
+#menu > div > h5 {
 	color: white;
 }
-#menu > div > h4> small{
+#menu > div > h5> small {
 	color: #ccc;
 }
-a.words{
-	text-align:right;
+a.words {
+	text-align: right;
+}
+.wedding {
+	position: absolute;
+	color: #fff;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	z-index: 2;
+	background-color: #a89293;
+	opacity: 0.4;
+	bottom: 0;
+	width: 100%;
 }
 </style>
 
@@ -99,13 +111,13 @@ a.words{
 			    </div>
 			</div>
 			<div class="row">
-		        <div class="col-md-3">
+		        <div class="col-md-2">
 		            <div style="color: #fff; background: #ff6b37;">
 		                <div class="row">
 		                    <div class="col-md-9">
-		                        <p>全部分类</p>
+		                        <span class="text-align:center">全部分类</span>
 		                    </div>
-		                    <div class="col-md-3" style="margin-top: 11px;"><i class="glyphicon glyphicon-th-list"></i></div>
+		                    <div class="col-md-3" style="margin-top: 11px;"><i class="glyphicon glyphicon-list"></i></div>
 		                </div>
 		            </div>
 		        </div>
@@ -131,24 +143,24 @@ a.words{
 		        </div>
 			</div>
 	        <div class="row">
-                <div id="menu" class="col-md-3">
-                    <div style="background: #383131;padding: 10px;">
-                        <h4>  美食<small>   火锅   人气聚餐</small></h4>
-                        <h4>  休闲娱乐<small>   足疗   KTV</small></h4>
-                        <h4>  结婚<small>   婚纱摄影   婚礼策划</small></h4>
-                        <h4>  电影演出赛事<small>   电影院</small></h4>
-                        <h4>  丽人<small>   美发   医学美容</small></h4>
-                        <h4>  酒店<small>   五星/豪华   经济连锁</small></h4>
-                        <h4>  亲子<small>   亲子摄影   早教中心</small></h4>
-                        <h4>  周边游<small>   景点   水上娱乐</small></h4>
-                        <h4>  运动健身<small>   健身中心</small></h4>
-                        <h4>  购物<small>   综合商场   服饰鞋包</small></h4>
-                        <h4>  家装<small>   装修设计   定制家居</small></h4>
-                        <h4>  学习培训<small>   外语   音乐</small></h4>
-                        <h4>  生活服务<small>   快照   家政</small></h4>
-                        <h4>  医疗健康<small>   齿科   体检中心</small></h4>
-                        <h4>  爱车<small>   洗车   维修保养</small></h4>
-                        <h4>  宠物<small>   宠物店   宠物医院</small></h4>
+                <div id="menu" class="col-md-2">
+                    <div style="background: #383131;padding-top: 5px; padding-left: 5px;">
+                        <h5>  美食<small>   火锅   人气聚餐</small></h5>
+                        <h5>  休闲娱乐<small>   足疗   KTV</small></h5>
+                        <h5>  结婚<small>   婚纱摄影   婚礼策划</small></h5>
+                        <h5>  电影演出赛事<small>   电影院</small></h5>
+                        <h5>  丽人<small>   美发   医学美容</small></h5>
+                        <h5>  酒店<small>   五星/豪华   经济连锁</small></h5>
+                        <h5>  亲子<small>   亲子摄影   早教中心</small></h5>
+                        <h5>  周边游<small>   景点   水上娱乐</small></h5>
+                        <h5>  运动健身<small>   健身中心</small></h5>
+                        <h5>  购物<small>   综合商场   服饰鞋包</small></h5>
+                        <h5>  家装<small>   装修设计   定制家居</small></h5>
+                        <h5>  学习培训<small>   外语   音乐</small></h5>
+                        <h5>  生活服务<small>   快照   家政</small></h5>
+                        <h5>  医疗健康<small>   齿科   体检中心</small></h5>
+                        <h5>  爱车<small>   洗车   维修保养</small></h5>
+                        <h5>  宠物<small>   宠物店   宠物医院</small></h5>
                     </div>
                 </div>
                 <div class="col-md-8">
@@ -198,7 +210,7 @@ a.words{
                     </div>
                     <br><br>
                     <div class="row">
-                        <div class="col-md-4 ">
+                        <div class="col-md-4">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="row"><a href="">小吃快餐</a></div>
@@ -218,19 +230,37 @@ a.words{
                         <div class="col-md-4 ">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <a href="">滨江道</a>
-                                    <a href="">大悦城</a>
-                                    <a href="">梅江小区</a>
+                                    <div class="row">
+                                    	<a href="">滨江道</a>
+                                    </div>
+                                    <div class="row">
+                                    	<a href="">大悦城</a>
+                                    </div>
+                                    <div class="row">
+                                    	<a href="">梅江小区</a>
+                                    </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="">五大道</a>
-                                    <a href="">经济开发区</a>
-                                    <a href="">小白楼</a>
+                                    <div class="row">
+                                    	<a href="">五大道</a>
+                                    </div>
+                                    <div class="row">
+                                    	<a href="">经济开发区</a>
+                                    </div>
+                                    <div class="row">
+                                    	<a href="">小白楼</a>
+                                    </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="">时代奥城</a>
-                                    <a href="">上杭路街</a>
-                                    <a href="">塘沽城区</a>
+                                    <div class="row">
+                                    	<a href="">时代奥城</a>
+                                    </div>
+                                    <div class="row">
+                                    	<a href="">上杭路街</a>
+                                    </div>
+                                    <div class="row">
+                                    	<a href="">塘沽城区</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -250,18 +280,18 @@ a.words{
                         </div>
                     </div>  
         		</div>
-                <div class="col-md-1">
+                <div class="col-md-2">
                     <div class="row">
-                        <div class="row">
+                        <div class="col-md-12">
                             <img src="http://p1.meituan.net/mobilem/ff63f017a1363c29eef79f32cd39a46e5120.png" alt=""  style="width: 60px;height: 60px;margin-left: 40px;">
 						</div>
-                        <div class="row">
+                        <div class="col-md-12">
                             <p>Hi,下午好</p>
                         </div>
-                        <div class="row">
+                        <div class="col-md-12">
                             <p>登录大众点评，发现品质生活</p>
                         </div>
-                        <div class="row">
+                        <div class="col-md-12">
                             <button class="btn btn-default" type="submit" style="background-color: #f63; color: white;,margin-left: 10px;">登录</button>
                             <button class="btn btn-default" type="submit" style="background-color: #f63; color: white;,margin-left: 10px;">注册</button>
                         </div>
@@ -281,7 +311,8 @@ a.words{
 			<div class="row">
 				<div class="col-md-6">
 					<div class="row">
-						<div class="col-md-10"><span style="font-size: 20px;">美食</span>
+						<div class="col-md-10">
+						<span style="font-size: 20px;">美食</span>
 						<button class="btn btn-default" type="submit">天津菜</button>
 						<button class="btn btn-default" type="submit">火锅</button>
 						<button class="btn btn-default" type="submit">面包甜点</button>
@@ -293,22 +324,221 @@ a.words{
 					</div>
 					<div class="row">
 						<div class="col-md-4">
-							<img src="http://p1.meituan.net/dpmerchantalbum/fd9aab0ac86d95c0b2aef32654f8afd4181806.jpg%40240w_180h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20" alt="">
-							<p>xxx</p>
+							<img src="http://p1.meituan.net/dpmerchantalbum/fd9aab0ac86d95c0b2aef32654f8afd4181806.jpg%40240w_180h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20" alt="" style="width: 170px;height: 96px;">
+							<p style="margin:0px 0px 1px;">汉巴味德</p>
+							<p class="text-right" style="margin:0px 0px 1px;color: #999;">☆★☆★☆18519条点评</p>
+							<div class="row" style="color: #999;">
+								<div class="col-md-6">
+									<span>自助餐</span>
+								</div>
+								<div class="col-md-6">
+									<span class="pull-right">芥园道</span>
+								</div>
+							</div>
+							<p style="margin:0px 0px 1px;color: #999;">￥78/人</p>
 						</div>
-						<div class="col-md-4"></div>
-						<div class="col-md-4"></div>
+						<div class="col-md-4">
+							<img src="http://p0.meituan.net/mogu/48ee1e7c13ca08175711dc6d3694af2f115297.jpg%40240w_180h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20" alt="" style="width: 170px;height: 96px;">
+							<p style="margin:0px 0px 1px;">南京大牌档</p>
+							<p class="text-right" style="margin:0px 0px 1px;color: #999;">7240条点评</p>
+							<div class="row" style="color: #999;">
+								<div class="col-md-6">
+									<span>上海江浙</span>
+								</div>
+								<div class="col-md-6">
+									<span>和平路</span>
+								</div>
+							</div>
+							<p style="margin:0px 0px 1px;color: #999;">￥65/人</p>
+						</div>
+						<div class="col-md-4">
+							<img src="https://img.meituan.net/msmerchant/6fc10fbf610af3f5ae064ab1b8468058628684.jpg%40280w_212h_1e_1c_1l%7Cwatermark%3D0" alt="" style="width: 170px;height: 96px;">
+							<p style="margin:0px 0px 1px;">三个渔夫四海蒸鲜</p>
+							<p class="text-right" style="margin:0px 0px 1px;color: #999;">8126条点评</p>
+							<div class="row" style="color: #999;">
+								<div class="col-md-6">
+									<span>海鲜</span>
+								</div>
+								<div class="col-md-6">
+									<span>小白楼</span>
+								</div>
+							</div>
+							<p style="margin:0px 0px 1px;color: #999;">￥159/人</p>
+						</div>
 					</div>
 					<div class="row">
-						<div class="col-md-4"></div>
-						<div class="col-md-4"></div>
-						<div class="col-md-4"></div>
+						<div class="col-md-4">
+							<img src="http://p1.meituan.net/mogu/d9b031c9ff9cca0bfdd1dd91917de8d452445.jpg%40240w_180h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20" alt="" style="width: 170px;height: 96px;">
+							<p style="margin:0px 0px 1px;">柒號馆·天津味道</p>
+							<p class="text-right" style="margin:0px 0px 1px;color: #999;">5047点评</p>
+							<div class="row" style="color: #999;">
+								<div class="col-md-6">
+									<span>天津菜</span>
+								</div>
+								<div class="col-md-6">
+									<span>滨江道</span>
+								</div>
+							</div>
+							<p style="margin:0px 0px 1px;color: #999;">￥65/人</p>
+						</div>
+						<div class="col-md-4">
+							<img src="https://img.meituan.net/msmerchant/f55706de01f9baf0192ea66956fcd66288116.png%40280w_212h_1e_1c_1l%7Cwatermark%3D0" alt="" style="width: 170px;height: 96px;">
+							<p style="margin:0px 0px 1px;">道味</p>
+							<p class="text-right" style="margin:0px 0px 1px;color: #999;">3997点评</p>
+							<div class="row" style="color: #999;">
+								<div class="col-md-6">
+									<span>创意菜</span>
+								</div>
+								<div class="col-md-6">
+									<span>五大道</span>
+								</div>
+							</div>
+							<p style="margin:0px 0px 1px;color: #999;">￥166/人</p>
+						</div>
+						<div class="col-md-4">
+							<img src="https://p0.meituan.net/activityback/4be23144b51952d99c73f0f4e2b92cad3987871.jpg%40240w_180h_1e_1c_1l%7Cwatermark%3D0" alt="" style="width: 170px;height: 96px;">
+							<p style="margin:0px 0px 1px;">花俚日式炭火烧肉</p>
+							<p class="text-right" style="margin:0px 0px 1px;color: #999;">19点评</p>
+							<div class="row" style="color: #999;">
+								<div class="col-md-6">
+									<span>日本料理</span>
+								</div>
+								<div class="col-md-6">
+									<span>围堤道沿线</span>
+								</div>
+							</div>
+							<p style="margin:0px 0px 1px;color: #999;">￥166/人</p>
+						</div>
 					</div>
 				</div>
-				<div class="col-md-6">2</div>
+				<div class="col-md-6">
+					<div class="row">
+						<div class="col-md-10"><span style="font-size: 20px;">休闲娱乐</span>
+						<button class="btn btn-default" type="submit">按摩/足疗</button>
+						<button class="btn btn-default" type="submit">洗浴/汗蒸</button>
+						<button class="btn btn-default" type="submit"> 采摘/农家乐</button>
+						</div>
+						<div class="col-md-2">
+							<a href="">全部</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<img src="http://p1.meituan.net/joymerchant/-1165199431490666367.jpg%40240w_180h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20" alt="" style="width: 170px;height: 96px;">
+							<p style="margin:0px 0px 1px;"> 爱江山玉桑拿休闲中心</p>
+							<p class="text-right" style="margin:0px 0px 1px;color: #999;">11068条点评</p>
+							<div class="row" style="color: #999;">
+								<div class="col-md-6">
+									<span>洗浴/汗蒸</span>
+								</div>
+								<div class="col-md-6">
+									<span>梅江小区</span>
+								</div>
+							</div>
+							<p style="margin:0px 0px 1px;color: #999;">￥113/人</p>
+						</div>
+						<div class="col-md-4">
+							<img src="http://p1.meituan.net/dpdeal/536fd563ae61b69b1c9eafde6ca64a8d113262.jpg%40240w_180h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20" alt="" style="width: 170px;height: 96px;">
+							<p style="margin:0px 0px 1px;">风云再起电玩俱乐部</p>
+							<p class="text-right" style="margin:0px 0px 1px;color: #999;">22437条点评</p>
+							<div class="row" style="color: #999;">
+								<div class="col-md-6">
+									<span>游乐游艺</span>
+								</div>
+								<div class="col-md-6">
+									<span>和平路</span>
+								</div>
+							</div>
+							<p style="margin:0px 0px 1px;color: #999;">￥115/人</p>
+						</div>
+						<div class="col-md-4">
+							<img src="http://qcloud.dpfile.com/pc/6stAsjG26XASLCLesQYNCelFI2ACsVSurJT01hIhK1l4uOhzbusutxhaYzmPi5YPJ-0BTbjj60XOL1huyULDDVEuLYk00OmSS1IdNpm8K8twhW7bzr4O88Ivp4FuDG0SfCF2ubeXzk49OsGrXt_KYDCngOyCwZK-s3fqawWswzk.jpg" alt="" style="width: 170px;height: 96px;">
+							<p style="margin:0px 0px 1px;">凌奥温泉生活馆</p>
+							<p class="text-right" style="margin:0px 0px 1px;color: #999;">5004条点评</p>
+							<div class="row" style="color: #999;">
+								<div class="col-md-6">
+									<span>洗浴/汗蒸</span>
+								</div>
+								<div class="col-md-6">
+									<span>时代奥城</span>
+								</div>
+							</div>
+							<p style="margin:0px 0px 1px;color: #999;">￥205/人</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<img src="https://p1.meituan.net/merchantpic/486a8b13a600008ed278fa45269eb422344579.jpg%40240w_180h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20" alt="" style="width: 170px;height: 96px;">
+							<p style="margin:0px 0px 1px;">极品相声帮</p>
+							<p class="text-right" style="margin:0px 0px 1px;color: #999;">2453点评</p>
+							<div class="row" style="color: #999;">
+								<div class="col-md-6">
+									<span>茶馆</span>
+								</div>
+								<div class="col-md-6">
+									<span>老城厢</span>
+								</div>
+							</div>
+							<p style="margin:0px 0px 1px;color: #999;">￥63/人</p>
+						</div>
+						<div class="col-md-4">
+							<img src="http://p0.meituan.net/joymerchant/5784682836687432723.JPG%40240w_180h_1e_1c_1l%7Cwatermark%3D1%26%26r%3D1%26p%3D9%26x%3D2%26y%3D2%26relative%3D1%26o%3D20" alt="" style="width: 170px;height: 96px;">
+							<p style="margin:0px 0px 1px;">水晶之星洗浴温泉汗蒸</p>
+							<p class="text-right" style="margin:0px 0px 1px;color: #999;">4035点评</p>
+							<div class="row" style="color: #999;">
+								<div class="col-md-6">
+									<span>洗浴/汗蒸</span>
+								</div>
+								<div class="col-md-6">
+									<span>梅江小区</span>
+								</div>
+							</div>
+							<p style="margin:0px 0px 1px;color: #999;">￥105/人</p>
+						</div>
+						<div class="col-md-4">
+							<img src="https://p1.meituan.net/activityback/b0c3ec4e5640a9a81df73502c360042d2694321.jpg%40240w_180h_1e_1c_1l%7Cwatermark%3D0" alt="" style="width: 170px;height: 96px;">
+							<p style="margin:0px 0px 1px;">思沐眼镜</p>
+							<p class="text-right" style="margin:0px 0px 1px;color: #999;">115点评</p>
+							<div class="row" style="color: #999;">
+								<div class="col-md-6">
+									<span>眼镜店</span>
+								</div>
+								<div class="col-md-6">
+									<span>小白楼</span>
+								</div>
+							</div>
+							<p style="margin:0px 0px 1px;color: #999;">￥706/人</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br><br><br>
+			<div class="row">
+				<div class="col-md-10">
+						<span style="font-size: 20px;">结婚</span>
+						<button class="btn btn-default" type="submit">婚纱摄影</button>
+						<button class="btn btn-default" type="submit">婚宴</button>
+						<button class="btn btn-default" type="submit">个性写真</button>
+				</div>
+				<div class="col-md-2">
+					<a href="">全部</a>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-4 ">
+					<div style="background: url(http://p1.meituan.net/mobilem/d0ce1a00beb4fc8d2fd619c1c91d0d7c265216.png) no-repeat ;width: 370px;height: 436px;">
+							<div class="wedding">
+								婚纱
+							</div>
+					</div>
+				</div>
+			</div>
+				<div class="col-md-8"></div>
 			</div>
 		</div>
 	</div>
+</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <script src="bootstrap.js"></script>
