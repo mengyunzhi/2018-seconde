@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>大众点评</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!--这是第一行表头-->
+        <div class="top-nav">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-6">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>写点评</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>
+                                你好，请登录
+                            <h5>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    个人中心
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>我的点评</li>
+                                    <li>我的收藏</li>
+                                    <li>个人设置</li>
+                                    <li>我的购物</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    帮助中心
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>帮助中心</li>
+                                    <li>我的客服</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    网站导航
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>网站导航</li>
+                                    <li>大众点评</li>
+                                    <li>个人设置</li>
+                                    <li>我的购物</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--表头结束，第二行，无内容-->
+        <hr/>
+        <!--第三行-->
+        <div class="row">
+            <div class="col-md-2">
+                <img src="搜狗截图20180921210930.png" style="width: 200px;height: 65px" />
+            </div>
+            <!--地址-->
+            <div class="col-md-1">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        天津
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li>河北</li>
+                        <li>北京</li>
+                        <li>上海</li>
+                        <li>河南</li>
+                        <li>上海</li>
+                        <li>广东</li>
+                        <li>湖南</li>
+                        <li>湖北</li>
+                    </ul>
+                </div>
+            </div>
+            <!--搜索框-->
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="搜索商户名，地址，外卖等" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" style="background-color: #FF6B34;width:120px; height: 38px;">搜索
+                        </button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-2 col-md-offset-1">
+                <img src="搜狗截图20180923084955.png" style="width: 100px;height: 80px" />
+                <div id="logo-input" class="logo-input">
+                </div>
+            </div>
+            <!--这是搜索框下面的内容-->
+            <div class="row">
+                <div class="col-lg-6 col-md-offset-3">
+                    <div style="color: #D3D3D3">
+                        <div>
+                            大家都在搜: 大悦城 天和城 爱琴海 王婆大虾 好利来
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--以下是导航框-->
+            <div class="row">
+                <div class="col-md-2" style="background-color:#FF6B34">
+                    <h4>
+                        全部分类
+                        <i class="pull-right glyphicon glyphicon-th-list"></i>
+                    </h4>
+                </div>
+                <div class="col-lg-6 col-md-offset-1">
+                    <ul class="nav nav-tabs">
+                        <li role="presentation" class="active">
+                            <a href="#">
+                                <strong>团购</strong>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#">
+                                <strong>霸王餐</strong>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#">
+                                <strong>社区论坛</strong>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#">
+                                <strong>预约订座</strong>
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#">
+                                <strong>2018必吃榜</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--以下是黑色框部分各种选项-->
+            <div class="row">
+                <div class="col left-column col-md-2" style="background-color:#000000; color:#FFFFFF">
+                    <div class="sidebar-box gallery-list">
+                        <div class="design" id="leftcolumn">
+                            <h4>
+                                美食
+                                <small>
+                                    火锅 人气聚餐
+                                </small>
+                            </h4>
+                            <h4>
+                                休闲娱乐
+                                <small>
+                                    足疗 KTV
+                                </small>
+                            </h4>
+                            <h4>
+                                结婚
+                                <small>
+                                    婚纱摄影 婚礼策划
+                                </small>
+                            </h4>
+                            <h4>
+                                电影演出赛事
+                                <small>
+                                    电影院
+                                </small>
+                            </h4>
+                            <h4>
+                                丽人
+                                <small>
+                                    美发 医学美容
+                                </small>
+                            </h4>
+                            <h4>
+                                酒店
+                                <small>
+                                    五星豪华 经济连锁
+                                </small>
+                            </h4>
+                            <h4>
+                                亲子
+                                <small>
+                                    亲子摄影 早教中心
+                                </small>
+                            </h4>
+                            <h4>
+                                周边游
+                                <small>
+                                    景点 水上娱乐
+                                </small>
+                            </h4>
+                            <h4>
+                                运动健身
+                                <small>
+                                    健身中心
+                                </small>
+                            </h4>
+                            <h4>
+                                购物
+                                <small>
+                                    综合商场 鞋包服饰
+                                </small>
+                            </h4>
+                            <h4>
+                                家装
+                                <small>
+                                    装修设计 定制家具
+                                </small>
+                            </h4>
+                            <h4>
+                                学习培训
+                                <small>
+                                    外语 音乐
+                                </small>
+                            </h4>
+                            <h4>
+                                生活服务
+                                <small>
+                                    快照 家政
+                                </small>
+                            </h4>
+                            <h4>
+                                医疗健康
+                                <small>
+                                    齿科 体检中心
+                                </small>
+                            </h4>
+                            <h4>
+                                爱车
+                                <small>
+                                    洗车 维修保养
+                                </small>
+                            </h4>
+                            <h4>
+                                宠物
+                                <small>
+                                    宠物店 宠物医院
+                                </small>
+                            </h4>
+                            <h4>
+                                宠物
+                                <small>
+                                    宠物店 宠物医院
+                                </small>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- 以下是轮流播放图片 -->
+                <div class="col-lg-8">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/884198e6a510fae49ce930795efa7751.png" alt="天津vip特权" />
+                            </div>
+                            <div class="item">
+                                <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/10b07c51a30af719ca30747522e27e38.jpg" alt="必吃榜套餐" />
+                            </div>
+                            <div class="item">
+                                <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/d5a4c82e3f3e3d9c40fa4fed12e28ad6.jpg" alt="必吃榜美食游乐园" />
+                            </div>
+                            <div class="item">
+                                <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/b1720317d22829a9278e919148ec321b.png" alt="全国爱牙日" />
+                            </div>
+                            <div class="item">
+                                <img src="https://op.meituan.net/oppkit_pic/pc_index_banner/d5a4c82e3f3e3d9c40fa4fed12e28ad6.jpg" alt="必吃榜美食游乐园" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3>
+                                <div class="text-center">
+                                    <i class="glyphicon glyphicon-th-large"></i>
+                                    热门分类
+                                </div>
+                            </h3>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>海鲜</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>面包甜点</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>天津菜</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5> 西餐</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>火锅</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>烧烤</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>日本料理</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>海鲜</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>自助餐</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>
+                                <div class="text-center">
+                                    <i class="glyphicon glyphicon-th"></i>
+                                    热门商圈</div>
+                            </h3>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>海鲜</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>面包甜点</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>天津菜</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>西餐</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>火锅</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>烧烤</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>日本料理</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>海鲜</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>自助餐</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>
+                                <div class="text-center">
+                                    <i class="glyphicon glyphicon-sort"></i>地铁线
+                                </div>
+                            </h3>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>海鲜</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>面包甜点</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>天津菜</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>西餐</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>火锅</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>烧烤</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>日本料理</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>海鲜</h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>自助餐</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--以下是右侧边框-->
+                <div class="col col-md-2">
+                    <div class="sidebar-box gallery-list">
+                        <div class="design" id="rightcolumn">
+                            <img src="头像.png" alt="用户头像">
+                            <button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary col-md-offset-1" autocomplete="off" style="background-color:#FF6B34">
+                                登录
+                            </button>
+                            <button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary col-md-offset-3" autocomplete="off" style="background-color:#FF6B34">
+                                注册
+                            </button>
+                            <script>
+                            $('#myButton').on('click', function() {
+                                var $btn = $(this).button('loading')
+                                // business logic...
+                                $btn.button('reset')
+                            })
+                            </script>
+                            <div class="row" style="color:#e1e1e1">
+                                <div class="col-md-4">
+                                    <h2>
+                                        <i class="glyphicon glyphicon-fire"></i>
+                                    </h2>
+                                </div>
+                                <div class="col-md-4">
+                                    <h2>
+                                        <i class="glyphicon glyphicon-flag"></i>
+                                    </h2>
+                                </div>
+                                <div class="col-md-4">
+                                    <h2>
+                                        <i class="glyphicon glyphicon-edit"></i>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h5>
+                                        热帖
+                                    </h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>
+                                        榜单
+                                    </h5>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5>
+                                        部落
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-offset-1">
+                                    <p>
+                                        [探75] 夏天就是要喝点凉水...
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-offset-1">
+                                    <p>
+                                        [探75] 夏天就是要喝点凉水...
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-offset-1">
+                                    <p>
+                                        [探75] 夏天就是要喝点凉水...
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-offset-1">
+                                    <p>
+                                        [探75] 我和小龙虾有个约会...
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div style="color:#FF6B34" class="col-md-offset-1">
+                                    <h4>
+                                        点评头条
+                                        <div class="btn-group" role="group">
+                                            <button type="button" class="btn btn-default" style="color:#FF6B34">申请入驻</button>
+                                        </div>
+                                    </h4>
+                                </div>
+                                <img src="搜狗截图20180926193818.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <!--以下是左框-->
+            <div class="row">
+                <div class="col left-column col-md-6">
+                    <div class="sidebar-box gallery-list">
+                        <div class="design" id="leftcolumn">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <h4>
+                                        美食
+                                        <i class="glyphicon glyphicon-glass" style="color: #FF3399">
+                                        </i>
+                                    </h4>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <button type="button" class="btn btn-default btn-xs">小吃</button>
+                                        <button type="button" class="btn btn-default btn-xs">天津菜</button>
+                                        <button type="button" class="btn btn-default btn-xs">甜点</button>
+                                        <button type="button" class="btn btn-default btn-xs">霸王餐</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <p>全部</p>
+                                </div>
+                            </div>
+                            <!--以下是图片-->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="http://p1.meituan.net/deal/__7470084__9996857.jpg%40340w_192h_1e_1l%7Cwatermark%3D0" alt="商户图片" width="180" height="105">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="http://p1.meituan.net/mogu/d9b031c9ff9cca0bfdd1dd91917de8d452445.jpg%40340w_192h_1e_1l%7Cwatermark%3D0" alt="商户图片" width="180" height="105">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="https://img.meituan.net/msmerchant/6fc10fbf610af3f5ae064ab1b8468058628684.jpg%40340w_192h_1e_1l%7Cwatermark%3D0" alt="商户图片" width="180" height="105">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h4>
+                                        汉巴味德
+                                    </h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <h4>
+                                        七号馆.天津味道
+                                    </h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <h4>
+                                        南京大排档
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div style="color: #FF6B34">
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                    </div>
+                                    <small>
+                                        ￥65每人
+                                    </small>
+                                    <small>
+                                        185799条点评
+                                    </small>
+                                </div>
+                                <div class="col-md-4">
+                                    <div style="color: #FF6B34">
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                    </div>
+                                    <small>
+                                        ￥65每人
+                                    </small>
+                                    <small>
+                                        185799条点评
+                                    </small>
+                                </div>
+                                <div class="col-md-4">
+                                    <div style="color: #FF6B34">
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                    </div>
+                                    <small>
+                                        ￥65每人
+                                    </small>
+                                    <small>
+                                        185799条点评
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="http://p1.meituan.net/deal/__7470084__9996857.jpg%40340w_192h_1e_1l%7Cwatermark%3D0" alt="商户图片" width="180" height="105">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="http://p1.meituan.net/mogu/d9b031c9ff9cca0bfdd1dd91917de8d452445.jpg%40340w_192h_1e_1l%7Cwatermark%3D0" alt="商户图片" width="180" height="105">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://img.meituan.net/msmerchant/6fc10fbf610af3f5ae064ab1b8468058628684.jpg%40340w_192h_1e_1l%7Cwatermark%3D0" alt="商户图片" width="180" height="105">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h4>
+                                    汉巴味德
+                                </h4>
+                            </div>
+                            <div class="col-md-4">
+                                <h4>
+                                    七号馆.天津味道
+                                </h4>
+                            </div>
+                            <div class="col-md-4">
+                                <h4>
+                                    南京大排档
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div style="color: #FF6B34">
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                </div>
+                                <small>
+                                    ￥65每人
+                                </small>
+                                <small>
+                                    185799条点评
+                                </small>
+                            </div>
+                            <div class="col-md-4">
+                                <div style="color: #FF6B34">
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                </div>
+                                <small>
+                                    ￥65每人
+                                </small>
+                                <small>
+                                    185799条点评
+                                </small>
+                            </div>
+                            <div class="col-md-4">
+                                <div style="color: #FF6B34">
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                    <i class="glyphicon glyphicon-star">
+                                    </i>
+                                </div>
+                                <small>
+                                    ￥65每人
+                                </small>
+                                <small>
+                                    185799条点评
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--以下是右框-->
+                <div class="row">
+                    <div class="col col-md-6">
+                        <div class="sidebar-box gallery-list">
+                            <div class="design" id="rightcolumn">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <h4>
+                                            亲子
+                                            <i class="glyphicon glyphicon-grain" style="color: #FF9900">
+                                            </i>
+                                        </h4>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="btn-group" role="group" aria-label="...">
+                                            <button type="button" class="btn btn-default btn-xs">儿童摄影</button>
+                                            <button type="button" class="btn btn-default btn-xs">儿童乐园</button>
+                                            <button type="button" class="btn btn-default btn-xs">幼儿园</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <p>全部</p>
+                                    </div>
+                                </div>
+                                <!--以下是图片-->
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="http://p0.meituan.net/wedding/52c4aeea3c70fa18b02b784677d32e5b362852.jpg%40340w_192h_1e_1l%7Cwatermark%3D0" alt="商户图片" width="180" height="105">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="http://p1.meituan.net/wedding/af68a3e21e5a45af8ae11b331a869ce0336368.jpg%40340w_192h_1e_1l%7Cwatermark%3D0" alt="商户图片" width="180" height="105">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="http://p0.meituan.net/wedding/b4aeac272a42ac62e7c41a256ea213a4287409.jpg%40340w_192h_1e_1l%7Cwatermark%3D0" alt="商户图片" width="180" height="105">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h4>
+                                            韩国童话Baby
+                                        </h4>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h4>
+                                            七号馆.天津味道
+                                        </h4>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h4>
+                                            合和庄园月子
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div style="color: #FF6B34">
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                        </div>
+                                        <small>
+                                            ￥2666每人
+                                        </small>
+                                        <small>
+                                            185799条点评
+                                        </small>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div style="color: #FF6B34">
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                        </div>
+                                        <small>
+                                            ￥2666每人
+                                        </small>
+                                        <small>
+                                            185799条点评
+                                        </small>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div style="color: #FF6B34">
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                            <i class="glyphicon glyphicon-star">
+                                            </i>
+                                        </div>
+                                        <small>
+                                            ￥2666每人
+                                        </small>
+                                        <small>
+                                            185799条点评
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="http://p0.meituan.net/wedding/212fa01c05ac780648a4f3c0523c7466321730.jpg%40340w_192h_1e_1l%7Cwatermark%3D0" alt="商户图片" width="180" height="105">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="http://p1.meituan.net/wedding/2575a980062a6ba060580d398c35247b194826.jpg%40340w_192h_1e_1l%7Cwatermark%3D0" alt="商户图片" width="180" height="105">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="http://p0.meituan.net/wedding/24454722dbf81bb1eaf4093441177807379810.jpg%40340w_192h_1e_1l%7Cwatermark%3D0" alt="商户图片" width="180" height="105">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <h4>
+                                        花儿日记韩式摄影
+                                    </h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <h4>
+                                        美中宜和妇儿医院
+                                    </h4>
+                                </div>
+                                <div class="col-md-4">
+                                    <h4>
+                                        LOOKID摄影
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div style="color: #FF6B34">
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                    </div>
+                                    <small>
+                                        ￥2666每人
+                                    </small>
+                                    <small>
+                                        185799条点评
+                                    </small>
+                                </div>
+                                <div class="col-md-4">
+                                    <div style="color: #FF6B34">
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                    </div>
+                                    <small>
+                                        ￥2666每人
+                                    </small>
+                                    <small>
+                                        185799条点评
+                                    </small>
+                                </div>
+                                <div class="col-md-4">
+                                    <div style="color: #FF6B34">
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                        <i class="glyphicon glyphicon-star">
+                                        </i>
+                                    </div>
+                                    <small>
+                                        ￥2666每人
+                                    </small>
+                                    <small>
+                                        185799条点评
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <!--下一个项目-->
+            <div class="row">
+                <div class="col-md-2">
+                    <h3>
+                        旅游景点
+                        <i class="glyphicon glyphicon-plane" style="color: #00CCCC">
+                        </i>
+                    </h3>
+                </div>
+                <div class="col-md-8">
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default">景点</button>
+                        <button type="button" class="btn btn-default">温泉</button>
+                        <button type="button" class="btn btn-default">动植物园</button>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <p>全部</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://p1.meituan.net/370.208/hotel/320b439ef66ca72366ffe5aa78de3532510722.jpg" alt="天津欢乐谷" width="380" height="218">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://p0.meituan.net/370.208/hotel/a7ac3dab72c36d4682a5f0dde05b89e91851392.jpg" alt="天津海昌极地海洋公园" width="380" height="218">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://p1.meituan.net/370.208/travel/4da962a071eac9505e0ce9255e11232d600869.png" alt="天津方特欢乐世界" width="380" height="218">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>
+                        天津欢乐谷
+                    </h4>
+                </div>
+                <div class="col-md-4">
+                    <h4>
+                        天津海昌海洋极地公园
+                    </h4>
+                </div>
+                <div class="col-md-4">
+                    <h4>
+                        天津方特欢乐世界
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="https://p1.meituan.net/370.208/hotel/320b439ef66ca72366ffe5aa78de3532510722.jpg" alt="天津欢乐谷" width="380" height="218">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://p0.meituan.net/370.208/hotel/a7ac3dab72c36d4682a5f0dde05b89e91851392.jpg" alt="天津海昌极地海洋公园" width="380" height="218">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://p1.meituan.net/370.208/travel/4da962a071eac9505e0ce9255e11232d600869.png" alt="天津方特欢乐世界" width="380" height="218">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>
+                        天津欢乐谷
+                    </h4>
+                </div>
+                <div class="col-md-4">
+                    <h4>
+                        天津海昌海洋极地公园
+                    </h4>
+                </div>
+                <div class="col-md-4">
+                    <h4>
+                        天津方特欢乐世界
+                    </h4>
+                </div>
+            </div>
+            <hr/>
+            <!--分界线-->
+            <div class="row">
+                <div class="col-md-offset-1">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>
+                                商务合作
+                            </h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>
+                                公司信息
+                            </h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>
+                                用户帮助
+                            </h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>
+                                手机版
+                            </h5>
+                        </div>
+                    </div>
+                    <!--       下一内容          -->
+                    <div class="row">
+                        <div class="col left-column col-md-9">
+                            <div class="sidebar-box gallery-list">
+                                <div class="design" id="leftcolumn">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h6>
+                                                公司代理招募
+                                            </h6>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6>
+                                                媒体报道
+                                            </h6>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6>
+                                                帮助
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h6>
+                                                美团排队
+                                            </h6>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6>
+                                                餐饮管理办法
+                                            </h6>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6>
+                                                开发者
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h6>
+                                                商企通
+                                            </h6>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6>
+                                                用户诚信公约
+                                            </h6>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6>
+                                                关于我们
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h6>
+                                                聚宝盆商业平台
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6>
+                                                投资者关系
+                                            </h6>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h6>
+                                                站务论坛
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-3">
+                            <div class="sidebar-box gallery-list">
+                                <div class="design" id="rightcolumn">
+                                    <img src="https://www.dpfile.com/app/pc-common/i/app-qrcode.png" />
+                                    <h6>
+                                        扫码下载
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <!--以下是友情链接模块-->
+            <div class="row">
+                <div class="col-md-offset-3">
+                    <a href="http://www.shjbzx.cn">
+                        <img src="1.png" height="42" />
+                    </a>
+                    <a href="http://report.12377.cn:13225/toreportinputNormal_anis.do">
+                        <img src="2.png" height="42" />
+                    </a>
+                    <a href="http://www.zx110.org/">
+                        <img src="3.png" height="42" />
+                    </a>
+                    <a href="https://ss.knet.cn/verifyseal.dll?sn=e13112611010043591jyx3000000&ct=df&pa=0.6434873733669519">
+                        <img src="4.png" height="42" />
+                    </a>
+                    <a href="https://ss.knet.cn/verifyseal.dll?sn=e13112611010043591jyx3000000&ct=df&pa=0.6434873733669519">
+                        <img src="5.png" height="42" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+</body>
+
+</html>
