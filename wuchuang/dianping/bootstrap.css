@@ -1,0 +1,296 @@
+.gray{
+	color: gray;
+}
+.orange{
+	color: #f63;
+}
+.margin-bottom{
+	margin-bottom: 20px;
+}
+.padding-left{
+	padding-left: 33px;
+}
+.width{
+	width: 9.333333%;
+}
+.width1{
+	width: 10.666667%;
+}
+.font-size{
+	font-size: 13px;
+}
+.padding{
+	padding-top: 10px;
+}
+.size{
+	width: 60px; 
+	height: 60px;
+}
+.padding-top{
+	padding-top: 13px;
+}
+.size1{
+	height: 40px;
+	background-color: #f63; 
+	padding-top: 10px;
+    padding-left: 30px;
+    color: white;
+}
+.width2{
+	width: 488px;
+}
+.style4{
+	border-right: 0px white; 
+	background-color: #fff; 
+	line-height: 1px; 
+	border-left: 2px solid #f63; 
+	border-top: 2px solid #f63; 
+	border-bottom: 2px solid #f63;
+}
+.color{
+	color: #b9b6b6;
+}
+.style1{
+	border-left: 0px; 
+	height: 40px; 
+	border-top: 2px solid #f63; 
+	border-bottom: 2px solid #f63; 
+	border-right: 2px solid #f63; 
+	font-size: 12px; 
+	width: 79%;
+}
+.background-color{
+	background-color: #f63;
+}
+.color1{
+	color: #f6f0f0;
+}
+.padding-top1{
+	padding-top: 12px;
+}
+.width3{
+	width: 20%;
+}
+.search {
+    display: inline-block;
+    width: 17px;
+    height: 20px;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+}
+.color2{
+	background-color: black; 
+	color: white;
+}
+.all{
+	margin-right: 0px;
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.food1{
+	margin-right: 5px; 
+	padding-right: 0px;
+}
+.food2{
+	margin-right: -20px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.fun1{
+	margin-right: -4px; 
+	padding-right: 0px;
+}
+.fun2{
+	margin-right: 5px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.marry1{
+	margin-right: -10px; 
+	padding-right: 0px;
+}
+.movie1{
+	margin-right: -15px; 
+	padding-right: 0px;
+}
+.movie2{
+	margin-right: -20px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.cosmetology1{
+	margin-right: -4px; 
+	padding-right: 0px;
+}
+.cosmetology2{
+	margin-right: -20px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.hotel1{
+	margin-right: -8px; 
+	padding-right: 0px;
+}
+.hotel2{
+	margin-right: 5px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.play1{
+	margin-right: -14px; 
+	padding-right: 0px;
+}
+.play2{
+	margin-right: -10px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.sport{
+	margin-right: 0px; 
+	padding-right: 0px;
+}
+.teeth1{
+	margin-right: -13px; 
+	padding-right: 0px;
+}
+.teeth2{
+	margin-right: 4px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.pet{
+	margin-right: -13px; 
+	padding-right: 0px; 
+	padding-left: 0px;
+}
+.cute{
+	width: 70px; 
+	height: 70px;
+}
+.size3{
+	width: 650px; 
+}
+.size4{
+	background-color: #f63; 
+    color: white;
+    width: 80px;
+    margin-left: 12px;
+    height: 23px;
+}
+.a{
+	color: black;
+}
+.a1{
+	color: white;
+}
+.fenlei1{
+	margin-top: 29px; 
+	margin-right: -48px; 
+	margin-left: 54px;
+}
+.fenlei2{
+	width: 23px; 
+	height: 23px;
+}
+.fenlei3{
+	margin-top: 20px; 
+	margin-left: 0px;
+}
+.shangquan1{
+	margin-top: 25px; 
+	margin-right: -44px;
+	margin-left: 42px;
+}
+.shangquan2{
+	width: 28px; 
+	height: 28px;
+}
+.shangquan3{
+	margin-top: 20px; 
+	margin-left: 0px;
+}
+.ditie1{
+	margin-top: 29px; 
+	margin-right: -48px; 
+	margin-left: 28px;
+}
+.ditie2{
+	width: 23px; 
+	height: 23px;
+}
+.ditie3{
+	margin-top: 20px; 
+	margin-left: 0px;
+}
+.paddingall1{
+	padding: 0px 0px 0px 24px; 
+	margin-top: 24px;
+}
+.paddingall2{
+	padding: 0px 0px 0px 24px; 
+	margin-top: 10px;
+}
+.paddingall3{
+	padding: 0px 0px 0px 16px; 
+	margin-top: 24px;
+}
+.paddingall4{
+	padding: 0px 0px 0px 16px; 
+	margin-top: 10px;
+}
+.extra{
+	padding-left: 10px;margin-top: 10px; margin-left: 13px; margin-right: -13px;
+}
+.denglu{
+	width: 78px; font-size: 13px; background-color: #f63; border-color: #f63;padding: 2px 10px;
+}
+.zhuce{
+	width: 78px; font-size: 13px; background-color: #f63; border-color: #f63;padding: 2px 10px; margin-left: 34px;
+}
+.tiezi{
+	width: 25px; height: 25px;
+}
+.tiezi1{
+	margin-top: 10px; padding-right: 5px;
+}
+.huangguan{
+	width: 30px; height: 30px; margin-top: -3px;
+}
+.huangguan1{
+	margin-top: 10px; margin-left: 10px; margin-right: -20px;
+}
+.buluo{
+	width: 22px; height: 22px; margin-top: 3px;
+}
+.buluo1{
+	margin-top: 10px; padding-left: 5px;
+}
+.wenzi{
+	padding-left: 0px; margin-top: 10px; color: gray;
+}
+.tu{
+	width: 170px; height: 96px;
+}
+.sheying{
+	background:url(http://p1.meituan.net/mobilem/d0ce1a00beb4fc8d2fd619c1c91d0d7c265216.png);width:370px;height:436px; padding-top: 361px; color: white;
+
+}
+.sheying1{
+	background-color: rgba(60,0,0,0.3); padding: 15px;
+}
+.hunli{
+	background:url(http://p0.meituan.net/mobilem/195793b069bf378468704f8887519944139264.png);width: 370px;height: 208px; padding-top: 133px; color: white;
+}
+.hunsha{
+	background:url(http://p1.meituan.net/mobilem/4676ad7b136e44e94011008d8f2a4d77117760.png);width: 370px;height: 208px; padding-top: 133px; color: white;
+}
+.hunyan{
+	background:url(http://p1.meituan.net/mobilem/451d61ee4a7db5f9bf07c10bc2312a0a111616.png);width:370px; height:208px; padding-top: 133px; color: white;
+}
+.lvpai{
+	background:url(http://p0.meituan.net/mobilem/6a0d332775e60bc0e2ea7a0889da2752113664.png);width: 370px;height: 208px; padding-top: 133px; color: white;
+}
+.last{
+	width: 72px; height: 35px;
+}

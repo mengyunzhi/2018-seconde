@@ -1,0 +1,76 @@
+.padding1{
+	padding:8px 10px;
+}
+.padding2{
+	padding:1px 10px;
+}
+.margin1{
+	margin:20px 10px 10px
+}
+.margin2{
+	margin:29px 10px 10px
+}
+.left{
+	float:left;
+}
+.clear {
+	clear:left;
+}
+.photoBorder {
+	border-width: 10px;
+	border-style: solid;
+	border-color: #060504;
+}
+.size1 {
+    width: 689px;
+    height: 340px;
+}
+.size2{
+    width: 293px;
+    height: 285px;
+}
+.size3{
+    width: 352px;
+    height: 271px;
+}
+.size4{
+    width: 277px;
+    height: 271px;
+}
+.size5{
+    width: 298px;
+    height: 354px;
+}
+.size6{
+    width: 362px;
+    height: 680px;
+}
+.size7{
+    width:333px;
+    height: 353px;
+}
+.size8{
+    width: 293px;
+    height: 353px;
+}
+.size9{
+    width: 301px;
+    height: 353px;
+}
+.size10{
+    width: 362px;
+    height: 353px;
+}
+.main{
+	background: -webkit-linear-gradient(left top, pink, gray); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(bottom right, pink, gray); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(bottom right, pink, gray); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to bottom right, pink, gray); /* 标准的语法 */
+    width: 1537px;
+    height: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px 10px;
+}
+.img{
+	box-shadow: 10px 10px 20px;
+}
