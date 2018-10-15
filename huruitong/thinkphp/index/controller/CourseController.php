@@ -28,7 +28,8 @@ class CourseController extends IndexController
 			return $this->error('保存错误1' . $Course->getError());
 		}
 		$klassIds = Request::instance()->post('klass_id/a');
-		if (!is_null($klassIds)) {
+		if (!is_null($klassIds)) 
+		{
             $datas = array();
             foreach ($klassIds as $klassId) {
                 $data = array();
@@ -47,5 +48,4 @@ class CourseController extends IndexController
         unset($Course);
         return $this->success('保存成功', url('index'));
 	}
-	//疑问：多对多如果删除其中一项，中间表就找不到id了，已经存在数据库中的中间表数组怎么办
 }

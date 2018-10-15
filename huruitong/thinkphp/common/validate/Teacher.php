@@ -5,7 +5,7 @@ use think\Validate;
 /**
  * 
  */
-class Teacher extends validate
+class Teacher extends Validate
 {
 	protected $rule = [
 		'username' => 'require|unique:teacher|length:4,25',
