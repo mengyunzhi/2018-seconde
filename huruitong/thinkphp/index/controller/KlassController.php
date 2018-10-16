@@ -9,7 +9,6 @@ use app\common\model\Teacher;
  */
 class KlassController extends IndexController
 {
-	
 	public function index()
 	{
 		$klasses = Klass::paginate();
