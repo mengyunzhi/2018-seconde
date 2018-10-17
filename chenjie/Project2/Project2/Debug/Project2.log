@@ -1,5 +1,0 @@
-﻿  Stack.cpp
-  main.cpp
-  正在生成代码...
-e:\study\c++\project2\project2\stack.h(76): warning C4715: “LinkStack<int>::Top”: 不是所有的控件路径都返回值
-  Project2.vcxproj -> E:\study\c++\Project2\Debug\Project2.exe
