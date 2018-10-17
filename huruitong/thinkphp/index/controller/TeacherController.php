@@ -64,13 +64,14 @@ class TeacherController extends IndexController
 
 	public function add()
 	{
-		try {
-            $htmls = $this->fetch();
-            return $htmls;
-        }
-        catch (\Exception $e) {
-            return '系统错误' . $e->getMessage();
-        }
+		$Teacher = new Teacher;
+		$Teacher->id = 0;
+		$Teacher->name = '';
+		$Teacher->username = '';
+		$Teacher->sex = 0;
+		$Teacher->email = '';
+		$this->assign('Teacher',Teacher);
+		return $this->fetch('edit');
 	}
 	public function delete() 
 	{
@@ -112,32 +113,27 @@ class TeacherController extends IndexController
 			return $e->getMessage();
 		}
 	}
+	public function save() 
+	{
+		$Teacher = new Teacher;
+		if (!$this->saveTeacher($Teacher)) {
+			return $this->error('操作失败' . $Teacher->getError);
+		}
+		return $this->success('操作成功',url('index'));
+	}
 	//三种方法
 	public function update()
 	{
-		try {
-			$id = Request::instance()->post('id/d');
-			$Teacher = Teacher::get($id);
-			if (is_null($Teacher)) {
-				$Teacher->name = input('post.name');
-				$Teacher->username = input('post.username');
-				$Teacher->sex = input('post.sex');
-				$Teacher->email = input('post.email');
-				if (false === $Teacher->validate(true)->save()) {
-					return $this->error('更新失败' . $Teacher->getError());
-				}else{
-					throw new Exception("更新的记录不存在", 1);
-				}
+		$id = Request::instance()->post('id/d');
+		$Teacher = Teacher::get($id);
+		if (is_null($Teacher)) {
+			if (!$this->saveTeacher($Teacher)) {
+				return $this->error('操作失败' . $Teacher->getError);
 			}
+		} else {
+			return $this->error('当前操作的记录不存在。');
 		}
-		catch (\think\Exception\HttpResponseException $e) {
-            throw $e;
-		}
-		catch (\Exception $e) {
-            return $e->getMessage();
-        }
-			
-			return $this->success('操作成功',url('index'));
+		return $this->success('操作成功1',url('index'));
 	}
 	// public function update()
  //    {
@@ -178,5 +174,13 @@ class TeacherController extends IndexController
     //     }
     //     return $message;
     // }
+    private function saveTeacher(Teacher &$Teacher) 
+    {
+    	$Teacher->name = input('post.name');
+    	$Teacher->username = input('post.username');
+    	$Teacher->sex = input('post.sex');
+    	$Teacher->email = input('post.email');
+    	return $Teacher->validate(true)->save();
+    }
 }
 

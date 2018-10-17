@@ -48,4 +48,14 @@ class CourseController extends IndexController
         unset($Course);
         return $this->success('保存成功', url('index'));
 	}
+	public function edit() 
+	{
+		$id = Request::instance()->param('id/d');
+		$Course = Course::get($id);
+		if (is_null($Course)) {
+			return $this->error('不存在id为' . $id . '的记录');
+		}
+		$this->assign('Course',$Course);
+		return $this->fetch();
+	}
 }
