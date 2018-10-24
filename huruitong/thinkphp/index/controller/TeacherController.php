@@ -14,23 +14,23 @@ class TeacherController extends IndexController
     	// 	return $this->error('plz login first',url('Login/index'));
     	// }
     	if (!Teacher::isLogin()) {
-    		return $this->error('plz login first',url('Login/index'));
+    		return $this->error('plz login first' , url('Login/index'));
     	}
     	//获取查询信息
     	$name = input('get.name');
     	// $name = Request::instance()->get('name');
         // echo $name;
 	   	$pageSize = 5;
-	    $Teacher = new Teacher;
+	    $Teacher = new Teacher();
 	    if (!empty($name)) {
-            $Teacher->where('name', 'like', '%' . $name . '%');
+            $Teacher->where('name' , 'like' , '%' . $name . '%');
         }
-	    $teachers = $Teacher->paginate($pageSize,false,[
-	     	'query'=>[
-	     	'name'=>$name,
-	    ],
+	    $teachers = $Teacher->paginate($pageSize , false , [
+	     	'query' => [
+	     	'name' => $name
+	    ]
 	    ]);
-	    $this->assign('teachers',$teachers);
+	    $this->assign('teachers' , $teachers);
 	    $htmls = $this->fetch();
 	    return $htmls;
 	}
@@ -50,9 +50,9 @@ class TeacherController extends IndexController
 
 			if ($result === false) {
 				return '新增失败' . $Teacher->getError();
-			}elseif ($result === 1) {
+			} elseif ($result === 1) {
 				return $this->success('新增成功' . $Teacher->id,url('index'));
-			}else{
+			} else {
 				return 'hello';
 			}
 		}
@@ -64,15 +64,16 @@ class TeacherController extends IndexController
 
 	public function add()
 	{
-		$Teacher = new Teacher;
+		$Teacher = new Teacher();
 		$Teacher->id = 0;
 		$Teacher->name = '';
 		$Teacher->username = '';
 		$Teacher->sex = 0;
 		$Teacher->email = '';
-		$this->assign('Teacher',Teacher);
+		$this->assign('Teacher' , $Teacher);
 		return $this->fetch('edit');
 	}
+
 	public function delete() 
 	{
 		try {
@@ -87,13 +88,17 @@ class TeacherController extends IndexController
 			if (!$Teacher->delete()) {
 				return $this->error('删除失败' . $Teacher->getError());
 			}
-			return $this->success('删除成功',url('index'));
-		}
-		catch(\Exception $e){
-			return $e->message();
+			return $this->success('删除成功' , url('index'));
+		} catch(\think\Exception\HttpResponseException $e) {
+			throw $e;
+			
+		} catch(\Exception $e) {
+			var_dump($e);
+			return $e->getMessage();
 		}
 		return $this->error($message);
 	}
+
 	public function edit()
 	{
 		try {
@@ -113,28 +118,31 @@ class TeacherController extends IndexController
 			return $e->getMessage();
 		}
 	}
+
 	public function save() 
 	{
-		$Teacher = new Teacher;
+		$Teacher = new Teacher();
 		if (!$this->saveTeacher($Teacher)) {
 			return $this->error('操作失败' . $Teacher->getError);
 		}
-		return $this->success('操作成功',url('index'));
+		return $this->success('操作成功' , url('index'));
 	}
-	//三种方法
+	
+	//update三种方法
 	public function update()
 	{
 		$id = Request::instance()->post('id/d');
 		$Teacher = Teacher::get($id);
 		if (is_null($Teacher)) {
-			if (!$this->saveTeacher($Teacher)) {
+			if (!$this->saveTeacher($Teacher , true)) {
 				return $this->error('操作失败' . $Teacher->getError);
 			}
 		} else {
 			return $this->error('当前操作的记录不存在。');
 		}
-		return $this->success('操作成功1',url('index'));
+		return $this->success('操作成功1' , url('index'));
 	}
+
 	// public function update()
  //    {
  //        // 接收数据
@@ -174,12 +182,16 @@ class TeacherController extends IndexController
     //     }
     //     return $message;
     // }
-    private function saveTeacher(Teacher &$Teacher) 
+    
+    private function saveTeacher(Teacher &$Teacher , $isUpdate = false) 
     {
     	$Teacher->name = input('post.name');
-    	$Teacher->username = input('post.username');
-    	$Teacher->sex = input('post.sex');
+    	if (!$isUpdate) {
+	    	$Teacher->username = input('post.username');
+	    }
+    	$Teacher->sex = input('post.sex/d');
     	$Teacher->email = input('post.email');
+    	//保存
     	return $Teacher->validate(true)->save();
     }
 }

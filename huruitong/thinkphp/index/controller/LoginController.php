@@ -27,7 +27,7 @@ class LoginController extends Controller
 			session('teacherId',$Teacher->getData('id'));
 			return $this->success('login success', url('Teacher/index'));
 		} else {
-			return $this->error('username or password incorret',url('index'));
+			return $this->error('username or password incorret', url('index'));
 		}
 	}
 	public function test()
@@ -37,9 +37,9 @@ class LoginController extends Controller
 	public function logOut()
 	{
 		if (Teacher::logOut) {
-			return $this->success('logout success',url('index'));
+			return $this->success('logout success', url('index'));
 		} else {
-			return $this->error('logout success',url('index'));
+			return $this->error('logout success', url('index'));
 		}
 	}
 }
