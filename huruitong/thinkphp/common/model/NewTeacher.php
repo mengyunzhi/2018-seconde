@@ -31,4 +31,25 @@ class NewTeacher extends Model
 			return false;
 		}
 	}
+
+	static public function encryptPassword($password)
+	{
+		return sha1(md5($password) . 'mengyunzhi');
+	}
+
+	static public function logOut() 
+	{
+		session('teacherId',null);
+		return true;
+	}
+
+	static public function isLogin()
+	{
+		$teacherId = session('teacherId');
+		if (isset($teacherId)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

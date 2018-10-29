@@ -31,7 +31,7 @@ class NewTeacherController extends Controller
 				'name' => $name
 			]
 		]);
-		$this->assign('teachers',$teachers);
+		$this->assign('teachers', $teachers);
 		return $this->fetch();
 	}
 
