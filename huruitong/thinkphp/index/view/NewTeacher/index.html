@@ -12,7 +12,7 @@
         <hr />
         <div class="row">
             <div class="col-md-8">
-                <form class="form-inline">
+                <form class="form-inline" action="">
                     <div class="form-group">
                         <label class="sr-only" for="name">姓名</label>
                         <input name="name" type="text" class="form-control" placeholder="name" value="{:input('get.name')}">
@@ -48,6 +48,7 @@
                 </tr>
                 {/volist}
             </table>
+            {$teachers->render()}
         </div>
     </div>
 </body>
