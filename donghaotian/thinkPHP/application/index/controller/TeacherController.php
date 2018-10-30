@@ -2,6 +2,7 @@
 namespace app\index\controller; // 该文件的位于application\index\controller文件夹
 use think\Controller;			// 用于与V层进行数据传递
 use app\common\model\Teacher;	// 教师模型
+use think\Request;	// 引用Request
 /**
  * 教师管理，继承think\Controller后，就可以利用V层对数据进行打包了。
  */
@@ -28,18 +29,35 @@ class TeacherController extends Controller
 	 * @date_time_set() 2016-11-0T12:31:24+0800
 	 */
 	public function insert()
-	{
-		// 实例化Teacher空对象
-		$Teacher = new Teacher();
+    {
+        // 接收传入数据
+        $postData = Request()->post();
 
-		// 为对象的属性赋值
-		$Teacher->name = '王五';
-		$Teacher->username = 'wangwu';
-		$Teacher->sex = '1';
-		$Teacher->email = 'wangwu@yunzhi.club';
+        // 实例化Teacher空对象
+        $Teacher = new Teacher();
 
-		// 执行对象的插入数据操作
-		var_dump($Teacher->save());
-		return $Teacher->name . '成功增加至数据表中。新增ID为：' . $Teacher->id;
-	}
+        // 为对象赋值
+        $Teacher->name = $postData['name'];
+        $Teacher->username = $postData['username'];
+        $Teacher->sex = $postData['sex'];
+        $Teacher->email = $postData['email'];
+        
+
+        // 新增对象至数据表
+        $Teacher->save();
+
+        // 反馈结果
+        return '新增成功。新增ID为：' . $Teacher->id;
+    }
+
+    /**
+     * 新增数据交互
+     * @author 梦云智 http://www.mengyunzhi.com
+     * @DateTime 2016-11-07T12:41:23+0800
+     */
+    public function add()
+    {
+        $htmls = $this->fetch();
+        return $htmls;
+    }
 }
