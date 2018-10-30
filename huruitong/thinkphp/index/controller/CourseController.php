@@ -11,6 +11,8 @@ class CourseController extends IndexController
 {
 	public function index()
 	{
+        $klasses = Klass::all();
+        $this->assign('klasses',$klasses);
 		return $this->fetch();
 	}
 	public function add()
@@ -50,12 +52,12 @@ class CourseController extends IndexController
 	}
 	public function edit() 
 	{
-		$id = Request::instance()->param('id/d');
-		$Course = Course::get($id);
-		if (is_null($Course)) {
-			return $this->error('不存在id为' . $id . '的记录');
-		}
-		$this->assign('Course',$Course);
-		return $this->fetch();
+        $id = Request::instance()->param('id/d');
+        $Course = Course::get($id);
+        if (is_null($Course)) {
+        	return $this->error('不存在id为' . $id . '的记录');
+        }
+        $this->assign('Course',$Course);
+        return $this->fetch();
 	}
 }
