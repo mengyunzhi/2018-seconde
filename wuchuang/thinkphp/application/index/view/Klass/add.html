@@ -10,9 +10,9 @@
 		<input type="text" name="name" id="name" />
 		<label for="teacher">teacher:</label>
 		<select name="teacher_id" id="teacher">
-			<option value="1">张三</option>
-			<option value="2">李四</option>
-			<option value="3">王五</option>
+			{volist name="teachers" id="_Teacher"}
+			<option value="{$_Teacher->getData('id')}">{$_Teacher->getData('name')}</option>
+			{/volist}
 		</select>
 		<button type="submit">submit</button>
 	</form>
