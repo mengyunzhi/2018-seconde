@@ -9,19 +9,19 @@ class TeacherController extends IndexController
 {
     public function index()
     {
-        //获取查询信息
+        // 获取查询信息
         $name = input('get.name');
 
-        $pageSize = 5;  //每页显示五条数据
+        $pageSize = 5;  // 每页显示五条数据
 
     	$Teacher = new Teacher();
 
-        //定制查询信息
+        // 定制查询信息
         if (!empty($name)) {
             $Teacher->where('name', 'like', '%' . $name . '%');
         }
 
-        //按条件查询数据并分页
+        // 按条件查询数据并分页
         $teachers = $Teacher->paginate($pageSize, false, [
             'query'=>[
             'name' => $name,
@@ -45,7 +45,7 @@ class TeacherController extends IndexController
      */
     public function insert()
     {
-        $message = '';    //提示信息
+        $message = '';    // 提示信息
 
         try {
             // 接受传入数据
@@ -70,7 +70,7 @@ class TeacherController extends IndexController
                 return $this->success('用户' . $Teacher->name . '新增成功', url('index'));
             }
 
-        //获取到thinkphp内置异常时
+        // 获取到thinkphp内置异常时
         } catch (\think\Exception\HttpResponseException $e) {
             throw $e;
 
@@ -96,11 +96,11 @@ class TeacherController extends IndexController
             throw new \Exception("Error Processing Request", 1);
             return $this->error("系统发生错误");
 
-        //获取到异常时，向上抛出，交给ThinkPHP处理
+        // 获取到异常时，向上抛出，交给ThinkPHP处理
         } catch (\think\Exception\HttpResponseException $e) {
             throw $e;
 
-        //获取到正常的异常时，输出异常
+        // 获取到正常的异常时，输出异常
         } catch (\Exception $e) {
             return $e->getMessage();
         }
@@ -108,39 +108,39 @@ class TeacherController extends IndexController
     public function delete()
     {
         try {
-            //获取pathinfo传入的ID值.
+            // 获取pathinfo传入的ID值.
             $Request = Request::instance();
 
-            //获取ID数据
+            // 获取ID数据
             $id = Request::instance()->param('id/d'); //"/d表示将数转化为整型"
 
-            //判断是否成功接受
+            // 判断是否成功接受
             if (0 === $id) {
                 throw new \Exception("未获取到ID信息", 1);
             }
 
-            //获取要删除对象
+            // 获取要删除对象
             $Teacher = Teacher::get($id);
 
-            //删除对象不存在
+            // 删除对象不存在
             if (is_null($Teacher)) {
                 return $this->error('不存在id为' . $id . '的教师，删除失败');
             }
             
-            //删除对象
+            // 删除对象
             if (!$Teacher->delete()) {
                 return $this->error('删除失败:' . $Teacher->getError());
             }
         
-            //获取到ThinkPHP内置异常时，直接向上抛出，交给PHP处理
+            // 获取到ThinkPHP内置异常时，直接向上抛出，交给PHP处理
         } catch (\think\Exception\HttpResponseException $e) {
             throw $e;
 
-        //获取到正常的异常时，输出异常
+        // 获取到正常的异常时，输出异常
         } catch (\Exception $e) {
             return $e->getMessage();
         }
-        //进行跳转
+        // 进行跳转
         return $this->success('删除成功', $Request->header('referer'));
     }
     public function edit()

@@ -39,7 +39,7 @@
 						{$klass->getTeacher()->getData('name')}
 						{$klass->getTeacher()->getData('id')}
 					</td>
-					<td><a class="btn btn-danger btn-sm" href="{:url('delete?id=' . $klass->getData('id'))}"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</a>&nbsp;<a class="btn btn-primary btn-sm" href="{:url('edit?id=' .$klass->getData('id'))}"><i class="glyphicon glyphicon-pencil"></i>&nbsp;编辑</a></td>
+					<td><a class="btn btn-danger btn-sm" href="{:url('delete?id=' . $klass->getData('id'))}"><i class="glyphicon glyphicon-trash"></i>&nbsp;删除</a>&nbsp;<a class="btn btn-primary btn-sm" href="{:url('edit?id=' . $klass->getData('id'))}"><i class="glyphicon glyphicon-pencil"></i>&nbsp;编辑</a></td>
 				</tr>
 				{/volist}
 			</table>
