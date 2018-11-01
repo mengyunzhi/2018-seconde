@@ -13,7 +13,7 @@ class NewKlassController extends NewIndexController
 	
 	public function index()
 	{
-		$klasses = NewKlass::paginate();
+		$klasses = NewKlass::all();
 		$this->assign('klasses', $klasses);
 		return $this->fetch();
 	}

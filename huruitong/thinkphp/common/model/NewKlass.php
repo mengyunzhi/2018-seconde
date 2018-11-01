@@ -7,6 +7,8 @@ use think\Model;
  */
 class NewKlass extends Model
 {
+    private $Teacher;
+    
 	public function getTeacher() 
 	{
     	if (is_null($this->Teacher)) {
