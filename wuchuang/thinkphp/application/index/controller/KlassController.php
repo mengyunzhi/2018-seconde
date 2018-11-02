@@ -12,7 +12,7 @@ class KlassController extends IndexController
 
         $pageSize = 2;  //每页显示2条数据
 
-    	$Klass = new Klass;
+        $Klass = new Klass;
 
         //定制查询信息
         if (!empty($name)) {
@@ -30,28 +30,28 @@ class KlassController extends IndexController
     }
     public function add() 
     {
-    	// 获取所有教师信息
-    	$teachers = Teacher::all();
-    	$this->assign('teachers', $teachers);
-    	return $this->fetch();
+        // 获取所有教师信息
+        $teachers = Teacher::all();
+        $this->assign('teachers', $teachers);
+        return $this->fetch();
     }       
 
     public function save()
     {
-    	// 实例化求信息
-    	$Request = Request::instance();
+        // 实例化求信息
+        $Request = Request::instance();
 
-    	// 实例化班级并赋值
-    	$Klass = new Klass();
-    	$Klass->name = $Request->post('name');
-    	$Klass->teacher_id = $Request->post('teacher_id/d');
+        // 实例化班级并赋值
+        $Klass = new Klass();
+        $Klass->name = $Request->post('name');
+        $Klass->teacher_id = $Request->post('teacher_id/d');
 
-    	// 添加数据
-    	if (!$Klass->validate(true)->save()) {
-    		return $this->error('数据添加错误' . $Klass->getError());
-    	}
+        // 添加数据
+        if (!$Klass->validate(true)->save()) {
+            return $this->error('数据添加错误' . $Klass->getError());
+        }
 
-    	return $this->success('操作成功' . url('index'));
+        return $this->success('操作成功' . url('index'));
     }
 
     public function edit()
@@ -64,6 +64,7 @@ class KlassController extends IndexController
 
         // 获取用户操作班级信息
         $Klass = Klass::get($id);
+
         if(false === $Klass)
         {
             return $this->error('系统未找到ID为' . $id . '的记录');
@@ -100,7 +101,7 @@ class KlassController extends IndexController
         $id = Request::instance()->param('id/d');
 
         if (is_null($id) || 0 === $id) {
-            return $this->error('为获取得到信息');
+            return $this->error('未获取得到信息');
         }
 
         // 获取要删除的元素

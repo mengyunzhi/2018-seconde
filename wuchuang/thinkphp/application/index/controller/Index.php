@@ -5,8 +5,8 @@ use think\Db;
 
 class Index
 {
-	public function index()
-	{
-		var_dump(Db::name('teacher')->find());
-	}
+    public function index()
+    {
+        var_dump(Db::name('teacher')->find());
+    }
 }

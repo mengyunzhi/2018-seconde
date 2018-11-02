@@ -14,7 +14,7 @@ class TeacherController extends IndexController
 
         $pageSize = 5;  // 每页显示五条数据
 
-    	$Teacher = new Teacher();
+        $Teacher = new Teacher();
 
         // 定制查询信息
         if (!empty($name)) {
@@ -28,14 +28,14 @@ class TeacherController extends IndexController
             ],
         ]);
 
-    	// 向V层传递数据
-    	$this->assign('teachers', $teachers);
+        // 向V层传递数据
+        $this->assign('teachers', $teachers);
 
-    	// 取回打包后的数据
-    	$htmls = $this->fetch();
+        // 取回打包后的数据
+        $htmls = $this->fetch();
 
-    	// 将数据返回给用户
-    	return $htmls;
+        // 将数据返回给用户
+        return $htmls;
     }
 
     /**
@@ -51,11 +51,11 @@ class TeacherController extends IndexController
             // 接受传入数据
             $postData = Request::instance()->post();
 
-    	    // 实例化Teacher为空对象
-    	    $Teacher = new Teacher();
+            // 实例化Teacher为空对象
+            $Teacher = new Teacher();
 
-    	    // 为对象赋值
-    	    $Teacher->name = $postData['name'];
+            // 为对象赋值
+            $Teacher->name = $postData['name'];
             $Teacher->username = $postData['username'];
             $Teacher->sex = $postData['sex'];
             $Teacher->email = $postData['email'];
