@@ -1,0 +1,10 @@
+D:\数据结构\大实验计算器\大实验计算器\bin\Debug\大实验计算器.exe.config
+D:\数据结构\大实验计算器\大实验计算器\bin\Debug\大实验计算器.exe
+D:\数据结构\大实验计算器\大实验计算器\bin\Debug\大实验计算器.pdb
+D:\数据结构\大实验计算器\大实验计算器\obj\Debug\大实验计算器.csprojAssemblyReference.cache
+D:\数据结构\大实验计算器\大实验计算器\obj\Debug\大实验计算器.Form1.resources
+D:\数据结构\大实验计算器\大实验计算器\obj\Debug\大实验计算器.Properties.Resources.resources
+D:\数据结构\大实验计算器\大实验计算器\obj\Debug\大实验计算器.csproj.GenerateResource.cache
+D:\数据结构\大实验计算器\大实验计算器\obj\Debug\大实验计算器.csproj.CoreCompileInputs.cache
+D:\数据结构\大实验计算器\大实验计算器\obj\Debug\大实验计算器.exe
+D:\数据结构\大实验计算器\大实验计算器\obj\Debug\大实验计算器.pdb
