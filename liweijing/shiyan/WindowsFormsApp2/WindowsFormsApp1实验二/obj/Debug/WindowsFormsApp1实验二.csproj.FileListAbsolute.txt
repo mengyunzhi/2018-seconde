@@ -1,0 +1,12 @@
+E:\新建文件夹\WindowsFormsApp1实验二\WindowsFormsApp1实验二\bin\Debug\WindowsFormsApp1实验二.exe.config
+E:\新建文件夹\WindowsFormsApp1实验二\WindowsFormsApp1实验二\bin\Debug\WindowsFormsApp1实验二.exe
+E:\新建文件夹\WindowsFormsApp1实验二\WindowsFormsApp1实验二\bin\Debug\WindowsFormsApp1实验二.pdb
+E:\新建文件夹\WindowsFormsApp1实验二\WindowsFormsApp1实验二\obj\Debug\WindowsFormsApp1实验二.csprojAssemblyReference.cache
+E:\新建文件夹\WindowsFormsApp1实验二\WindowsFormsApp1实验二\obj\Debug\WindowsFormsApp1实验二.Form1.resources
+E:\新建文件夹\WindowsFormsApp1实验二\WindowsFormsApp1实验二\obj\Debug\WindowsFormsApp1实验二.Properties.Resources.resources
+E:\新建文件夹\WindowsFormsApp1实验二\WindowsFormsApp1实验二\obj\Debug\WindowsFormsApp1实验二.csproj.GenerateResource.cache
+E:\新建文件夹\WindowsFormsApp1实验二\WindowsFormsApp1实验二\obj\Debug\WindowsFormsApp1实验二.csproj.CoreCompileInputs.cache
+E:\新建文件夹\WindowsFormsApp1实验二\WindowsFormsApp1实验二\obj\Debug\WindowsFormsApp1实验二.exe
+E:\新建文件夹\WindowsFormsApp1实验二\WindowsFormsApp1实验二\obj\Debug\WindowsFormsApp1实验二.pdb
+E:\新建文件夹\WindowsFormsApp1实验二\WindowsFormsApp1实验二\obj\Debug\WindowsFormsApp1实验二.Form2.resources
+E:\新建文件夹\WindowsFormsApp1实验二\WindowsFormsApp1实验二\obj\Debug\WindowsFormsApp1实验二.Form3.resources
