@@ -1,0 +1,10 @@
+H:\大实验\Location\location\location\bin\Debug\location.exe.config
+H:\大实验\Location\location\location\bin\Debug\location.exe
+H:\大实验\Location\location\location\bin\Debug\location.pdb
+H:\大实验\Location\location\location\obj\Debug\location.csprojAssemblyReference.cache
+H:\大实验\Location\location\location\obj\Debug\location.Properties.Resources.resources
+H:\大实验\Location\location\location\obj\Debug\location.csproj.GenerateResource.cache
+H:\大实验\Location\location\location\obj\Debug\location.csproj.CoreCompileInputs.cache
+H:\大实验\Location\location\location\obj\Debug\location.exe
+H:\大实验\Location\location\location\obj\Debug\location.pdb
+H:\大实验\Location\location\location\obj\Debug\location.Form1.resources

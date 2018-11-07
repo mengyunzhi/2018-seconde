@@ -1,0 +1,13 @@
+H:\大实验\Serve\Serve\Serve\bin\Debug\Serve.exe.config
+H:\大实验\Serve\Serve\Serve\bin\Debug\Serve.exe
+H:\大实验\Serve\Serve\Serve\bin\Debug\Serve.pdb
+H:\大实验\Serve\Serve\Serve\obj\Debug\Serve.csprojAssemblyReference.cache
+H:\大实验\Serve\Serve\Serve\obj\Debug\Serve.Form1.resources
+H:\大实验\Serve\Serve\Serve\obj\Debug\Serve.Properties.Resources.resources
+H:\大实验\Serve\Serve\Serve\obj\Debug\Serve.csproj.GenerateResource.cache
+H:\大实验\Serve\Serve\Serve\obj\Debug\Serve.csproj.CoreCompileInputs.cache
+H:\大实验\Serve\Serve\Serve\obj\Debug\Serve.exe
+H:\大实验\Serve\Serve\Serve\obj\Debug\Serve.pdb
+H:\大实验\Serve\Serve\Serve\obj\Debug\Serve.Form2.resources
+H:\大实验\Serve\Serve\Serve\obj\Debug\Serve.Form3.resources
+H:\大实验\Serve\Serve\Serve\obj\Debug\Serve.Form4.resources

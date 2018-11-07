@@ -1,0 +1,10 @@
+H:\大实验\Calculation\Calculation\bin\Debug\Calculation.exe.config
+H:\大实验\Calculation\Calculation\bin\Debug\Calculation.exe
+H:\大实验\Calculation\Calculation\bin\Debug\Calculation.pdb
+H:\大实验\Calculation\Calculation\obj\Debug\Calculation.csprojAssemblyReference.cache
+H:\大实验\Calculation\Calculation\obj\Debug\Calculation.Form1.resources
+H:\大实验\Calculation\Calculation\obj\Debug\Calculation.Properties.Resources.resources
+H:\大实验\Calculation\Calculation\obj\Debug\Calculation.csproj.GenerateResource.cache
+H:\大实验\Calculation\Calculation\obj\Debug\Calculation.csproj.CoreCompileInputs.cache
+H:\大实验\Calculation\Calculation\obj\Debug\Calculation.exe
+H:\大实验\Calculation\Calculation\obj\Debug\Calculation.pdb
