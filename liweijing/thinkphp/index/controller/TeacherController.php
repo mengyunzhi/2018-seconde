@@ -7,14 +7,10 @@ use app\common\model\Teacher;  // 教师模型
 /**
  * 教师管理
  */
-class TeacherController extends Controller {
+class TeacherController extends IndexController ;
     public function index() {
-            // 验证用户是否登录
-        if (!Teacher::isLogin()) {
-            return $this->error('plz login first', url('Login/index'));
-        }
         // 获取查询信息
-        $name = input('get.name')
+        $name = input('get.name');
         // 获取查询信息
         $name = Request::instance()->get('name');
         $pageSize = 5; // 每页显示5条数据
