@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "银行排队", "银行排队\银行排队.vcxproj", "{F384DF89-23F6-4057-9993-71548A1EA019}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F384DF89-23F6-4057-9993-71548A1EA019}.Debug|x64.ActiveCfg = Debug|x64
+		{F384DF89-23F6-4057-9993-71548A1EA019}.Debug|x64.Build.0 = Debug|x64
+		{F384DF89-23F6-4057-9993-71548A1EA019}.Debug|x86.ActiveCfg = Debug|Win32
+		{F384DF89-23F6-4057-9993-71548A1EA019}.Debug|x86.Build.0 = Debug|Win32
+		{F384DF89-23F6-4057-9993-71548A1EA019}.Release|x64.ActiveCfg = Release|x64
+		{F384DF89-23F6-4057-9993-71548A1EA019}.Release|x64.Build.0 = Release|x64
+		{F384DF89-23F6-4057-9993-71548A1EA019}.Release|x86.ActiveCfg = Release|Win32
+		{F384DF89-23F6-4057-9993-71548A1EA019}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89AD5E19-6092-4CAF-9552-68118B6B5191}
+	EndGlobalSection
+EndGlobal
