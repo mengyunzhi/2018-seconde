@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>课程</title>
+</head>
+<body class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="{:url('save')}" method="post">
+                <label for="name">name:</label>
+                <input type="text" name="name" id="name" />
+                {volist name="klasses" id="klass"}
+                    <input type="checkbox" name="klass_id[]" id="klass_id_{$klass->id}" value="{$klass->id}" />
+                    <label for="klass_id_{$klass->id}">{$klass->name}</label>
+                {/volist}
+                <button type="submit">submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
