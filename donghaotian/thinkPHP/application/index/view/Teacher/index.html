@@ -11,7 +11,20 @@
     <div class="row">
         <div class="col-md-12">
             <hr />
-            <a href="{:url('add')}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>&nbsp;增加</a>
+            <div class="row">
+                <div class="col-md-8">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">姓名</label>
+                            <input name="name" type="text" class="form-control" placeholder="姓名..." value="{:input('get.name')}">
+                        </div>
+                        <button type="submit" class="btn btn-fault"><i class="glyphicon glyphicon-plus"></i>&nbsp;查询</button>
+                    </form>
+                </div>
+                <div class="col-md-4 text-right">
+                    <a href="{:url('add')}" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i>&nbsp;增加</a>
+                </div>
+            </div>
             <hr />
             <table class="table table-hover table-bordered">
                 <tr class="info">
@@ -22,21 +35,23 @@
                     <th>用户名</th>
                     <th>操作</th>
                 </tr>
-                {volist name="teachers" id="teacher" key="key"}
+                {volist name="teachers" id="_Teacher" key="key"}
                 <tr>
                     <td>{$key}</td>
-                    <td>{$teacher->getData('name')}</td>
-                    <td>{eq name='teacher->getData("sex")' value='0'}男{else /}女{/eq}</td>
-                    <td>{$teacher->getData('email')}</td>
-                    <td>{$teacher->getData('username')}</td>
+                    <td>{$_Teacher->getData('name')}</td>
+                    <td>{eq name='_Teacher->getData("sex")' value='0'}男{else /}女{/eq}</td>
+                    <td>{$_Teacher->getData('email')}</td>
+                    <td>{$_Teacher->getData('username')}</td>
                     <td>
-                        <a href="{:url('edit?id=' . $teacher->getData('id'))}">编辑</a>
+                        <a href="{:url('edit?id=' . $_Teacher->getData('id'))}">编辑</a>
                         &nbsp;&nbsp;
-                        <a href="{:url('delete?id=' . $teacher->getData('id'))}">删除</a>
+                        <a href="{:url('delete?id=' . $_Teacher->getData('id'))}">删除</a>
                     </td>
                 </tr>
-                {/volist}
+                {/volist} 
             </table>
+            当前页面的条数为{$teachers->count()}
+            {$teachers->render()}
         </div>
     </div>
 </body>
