@@ -4,7 +4,8 @@ use think\Model;
 
 class Course extends Model
 {
-    protected $rule = [
-        'name'  => 'require|length:2,25',
-    ];
+    public function Klasses()
+    {
+        return $this->belongsToMany('Klass', config('database.prefix') . 'klass_course');
+    }
 }

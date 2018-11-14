@@ -11,6 +11,7 @@ class CourseController extends IndexController
 {
     public function index()
     {
+        $course = new Course;
         $courses = Course::paginate();
         $this->assign('courses', $courses);
         return $this->fetch();
@@ -18,8 +19,8 @@ class CourseController extends IndexController
 
     public function add()
     {
-        $klasses = Klass::all();
-        $this->assign('klasses', $klasses);
+        
+        $this->assign('Course', new Course);
 
         return $this->fetch();
     }
@@ -38,24 +39,11 @@ class CourseController extends IndexController
         $klassIds = Request::instance()->post('klass_id/a');
 
         if (!is_null($klassIds)) {
-            $datas = array();
-            foreach ($klassIds as $klassId) {
-                $data = array();
-                $data['klass_id'] = $klassId;
-                $data['course_id'] = $Course->id;
-
-                array_push($datas, $data);
-            }
-
-            if (!empty($datas)) {
-                $KlassCourse = new KlassCourse;
-
-                if (!$KlassCourse->validate(true)->saveAll($datas)) {
-                    return $this->error('课程-班级信息保存错误：' . $KlassCourse->getError());
-                }
-                unset($KlassCourse);
+            if (!$Course->Klasses()->saveAll($klassIds)) {
+                return $this->error('课程-班级信息保存错误：' . $Course->Klasses()->getError());
             }
         }
+
 
         unset($Course);
         return $this->success('操作成功', url('index'));
