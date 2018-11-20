@@ -7,6 +7,23 @@ use think\Request;
  */
 class TeacherController extends IndexController
 {
+    /**
+     * @param   bool$isUpdate 是否为更新操作
+     */
+    private function saveTeacher(Teacher &$Teacher, $isUpdate = false) 
+    {
+        // 写入要更新的数据
+        $Teacher->name = Request::instance()->post('name');
+        if (!$isUpdate) {
+            $Teacher->username = Request::instance()->post('username');
+        }
+        $Teacher->sex = Request::instance()->post('sex/d');
+        $Teacher->email = Request::instance()->post('email');
+
+        // 更新或保存
+        return $Teacher->validate(true)->save();
+    }
+
     public function index()
     {
         // 获取查询信息
@@ -23,9 +40,9 @@ class TeacherController extends IndexController
 
         // 按条件查询数据并分页
         $teachers = $Teacher->paginate($pageSize, false, [
-            'query'=>[
-            'name' => $name,
-            ],
+            'query' => [
+                'name' => $name,
+            ]
         ]);
 
         // 向V层传递数据
@@ -38,59 +55,37 @@ class TeacherController extends IndexController
         return $htmls;
     }
 
-    /**
-     * 插入新数据
-     * @return   html
-     * @author 梦云智 http://www.mengyunzhi.com
-     */
-    public function insert()
+    public function save()
     {
-        $message = '';    // 提示信息
+        // 实例化
+        $Teacher = new Teacher;
 
-        try {
-            // 接受传入数据
-            $postData = Request::instance()->post();
-
-            // 实例化Teacher为空对象
-            $Teacher = new Teacher();
-
-            // 为对象赋值
-            $Teacher->name = $postData['name'];
-            $Teacher->username = $postData['username'];
-            $Teacher->sex = $postData['sex'];
-            $Teacher->email = $postData['email'];
-
-            // 新增对象至数据表
-            $result = $Teacher->validate(true)->save();
-
-            // 反馈结果
-            if (false === $result) {
-                return '新增失败:' . $Teacher->getError();
-            } else {
-                return $this->success('用户' . $Teacher->name . '新增成功', url('index'));
-            }
-
-        // 获取到thinkphp内置异常时
-        } catch (\think\Exception\HttpResponseException $e) {
-            throw $e;
-
-        // 获取到正常的异常时
-        } catch (\Exception $e) {
-            
-            return $e->getMessage();
-        } 
-
-        return $this->error($message);
+        // 新增数据
+        if (!$this->saveTeacher($Teacher)) {
+            return $this->error('操作失败' . $Teacher->getError());
+        }
+    
+        // 成功跳转至index触发器
+        return $this->success('操作成功', url('index'));
     }
+
     public function add()
     {
-        try {
-            $htmls = $this->fetch();
-            return $htmls;
-        } catch (\Exception $e) {
-            return '系统错误' . $e->getMessage();
-        }
+        // 实例化
+        $Teacher = new Teacher;
+
+        // 设置默认值
+        $Teacher->id = 0;
+        $Teacher->name = '';
+        $Teacher->username = '';
+        $Teacher->sex = 0;
+        $Teacher->email = '';
+        $this->assign('Teacher', $Teacher);
+
+        // 调用edit模板
+        return $this->fetch('edit');
     }
+
     public function test() {
         try {
             throw new \Exception("Error Processing Request", 1);
@@ -105,6 +100,7 @@ class TeacherController extends IndexController
             return $e->getMessage();
         }
     }
+
     public function delete()
     {
         try {
@@ -143,6 +139,7 @@ class TeacherController extends IndexController
         // 进行跳转
         return $this->success('删除成功', $Request->header('referer'));
     }
+
     public function edit()
     {
         try {
@@ -155,7 +152,7 @@ class TeacherController extends IndexController
             }
 
             // 在Teacher表模型中获取当前记录
-            if (null === $Teacher = Teacher::get($id)) {
+            if (is_null($Teacher = Teacher::get($id))) {
                 // 由于在$this->error抛出了异常，所以也可以省略return
                 $this->error('系统未找到ID为' . $id . '的记录');
             }
@@ -176,41 +173,25 @@ class TeacherController extends IndexController
             return $e->getMessage();
         } 
     }
+    
     public function update() 
     {
-        try {
-            // 接受数据，获取要更新的关键字信息
-            $id = Request::instance()->post('id/d');
+        // 接收数据，取要更新的关键字信息
+        $id = Request::instance()->post('id/d');
 
-            // 获取当前对象
-            $Teacher = Teacher::get($id);
+        // 获取当前对象
+        $Teacher = Teacher::get($id);
 
-            if (!is_null($Teacher)) {
-            
-                // 写入要更新的数据
-                $Teacher->name = input('post.name');
-                $Teacher->username = input('post.username');
-                $Teacher->sex = input('post.sex');
-                $Teacher->email = input('post.email');
-
-                // 更新
-                if (false === $Teacher->validate(true)->save()) {
-                    return $this->error('更新失败' . $Teacher->getError());
-                }
-            } else {
-                throw new \Exception("所更新的记录不存在", 1);       // 调用PHP内置类时，需要在前面加上 \
+        if (!is_null($Teacher)) {
+            if (!$this->saveTeacher($Teacher, true)) {
+                return $this->error('操作失败' . $Teacher->getError());
             }
-        // 获取到ThinkPHP的内置异常时，直接向上抛出，交给ThinkPHP处理
-        } catch (\think\Exception\HttpResponseException $e) {
-            throw $e;
-
-        // 获取到正常的异常时，输出异常
-        } catch (\Exception $e) {
-        
-            return $e->getMessage();
+        } else {
+            return $this->error('当前操作的记录不存在');
         }
-
-        //成功跳转至index触发器
+    
+        // 成功跳转至index触发器
         return $this->success('操作成功', url('index'));
     }
+
 }
