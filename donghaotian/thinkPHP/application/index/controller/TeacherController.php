@@ -13,50 +13,35 @@ class TeacherController extends Controller
 {
     public function index()
     {
-        try {
-            // 获取查询信息
-            $name = Request::instance()->get('name');
-            echo $name;
+        // 验证用户是否登录
+        if (!Teacher::isLogin())
+        {
+            return $this->error('plz login first', url('Login/index'));
+        }
 
-            $pageSize = 5; // 每页显示5条数据
+        // 获取查询信息
+        $name = input('get.name');
 
-            // 实例化Teacher
-            $Teacher = new Teacher; 
-            
-            // 实例化Teacher
-            $Teacher = new Teacher;
+        $pageSize = 5; // 每页显示5条数据
 
-            // 定制查询信息
-            if (!empty($name)) {
-                $Teacher->where('name', 'like', '%' . $name . '%');
-            }
+        // 实例化Teacher
+        $Teacher = new Teacher; 
 
-            // 按条件查询数据并调用分页
-            $teachers = $Teacher->paginate($pageSize, false, [
-                'query'=>[
-                    'name' => $name,
-                ],
-            ]);
-            // 调用分页
-            $teachers = $Teacher->paginate($pageSize);
+        // 按条件查询数据并调用分页
+        $teachers = $Teacher->where('name', 'like', '%' . $name . '%')->paginate($pageSize, false, [
+            'query' => [
+                'name' => $name,
+            ]
+        ]);
 
-            // 向V层传数据
-            $this->assign('teachers', $teachers);
+        // 向V层传数据
+        $this->assign('teachers', $teachers);
 
-            // 取回打包后的数据
-            $htmls = $this->fetch();
+        // 取回打包后的数据
+        $htmls = $this->fetch();
 
-            // 将数据返回给用户
-            return $htmls;
-
-        // 获取到ThinkPHP的内置异常时，直接向上抛出，交给ThinkPHP处理
-        } catch (\think\Exception\HttpResponseException $e) {
-             throw $e;
-
-          // 获取到正常的异常时，输出异常
-        } catch (\Exception $e) {
-            return $e->getMessage();
-        } 
+        // 将数据返回给用户
+        return $htmls;
     }
 
     /**
