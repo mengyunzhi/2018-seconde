@@ -11,7 +11,8 @@
         <label for="teacher">teacher</label>
         <select name="teacher_id" id="teacher">
             {volist name="teachers" id="_Teacher"}
-            <option value="{$_Teacher->getData('id')}">{&_Teacher->getData('name')}</option>
+            <option value="{$_Teacher->getData('id')}">{$_Teacher->getData('name')}
+            </option>
             {/volist}
         </select>
         <button type="submit">submit</button>

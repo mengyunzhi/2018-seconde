@@ -7,7 +7,8 @@ use app\common\model\Teacher;  // 教师模型
 /**
  * 教师管理
  */
-class TeacherController extends IndexController ;
+class TeacherController extends IndexController 
+{
     public function index() {
         // 获取查询信息
         $name = input('get.name');
