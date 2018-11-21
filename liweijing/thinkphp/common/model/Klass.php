@@ -18,6 +18,6 @@ class Klass extends Model
             $teacherId = $this->getData('teacher_id');
             $this->Teacher = Teacher::get($teacherId);
         }
-       return $this->Teacher;
+        return $this->Teacher;
     }   
 }
