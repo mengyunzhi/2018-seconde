@@ -12,12 +12,8 @@ class Klass extends Model
      * 获取对应的辅导员的信息
      * @return Teacher 教师
      */
-    public function getTeacher()
+    public function Teacher()
     {
-        if (is_null($this->Teacher)) {
-            $teacherId = $this->getData('teacher_id');
-            $this->Teacher = Teacher::get($teacherId);
-        }
-        return $this->Teacher;
-    }   
+        return $this->belongsTo('Teacher');
+    }
 }
