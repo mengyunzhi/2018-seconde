@@ -57,7 +57,59 @@ class Teacher extends Model
      */
     static public function encryptPassword($password)
     {   
+        if (!is_string($password)) {
+            throw new \RuntimeException("传入变量类型非字符串，错误码2",2);
+        }
+
         // 实际的过程中，我还还可以借助其它字符串算法，来实现不同的加密。
         return sha1(md5($password) . 'mengyunzhi');
+    }
+
+    /**
+     * 注销
+     * @return  bool 成功true， 失败false。
+     * @author  panjie 
+     */
+    static public function logOut()
+    {
+        // 销毁session 中数据
+        session('teacherId', null);
+        return true;
+    }
+
+    /**
+     * 判断用户是否已登录
+     * @return  boolean 已登录true
+     * @author  panjie <panjie@yunzhiclub.com>
+     */
+    static public function isLogin()
+    {
+        $teacherId = session('teacherId');
+
+        // isset()和is_null()是一对反义词
+        if (isset($teacherId)) {
+             return true;
+         } else {
+            return false;        
+         } 
+    }
+
+    /**
+     * 对数据进行保存或更新
+     * @param    Teacher                  &$Teacher 教师
+     * @return   bool                             
+     * @author 梦云智 http://www.mengyunzhi.com
+     * @DateTime 2016-10-24T15:24:29+0800
+     */
+    private function saveTeacher(Teacher &$Teacher)
+    {
+        // 写入要更新的数据
+        $Teacher->name = input('post.name');
+        $Teacher->username = input('post.username');
+        $Teacher->sex = input('post.sex/d');
+        $Teacher->email = input('post.email');
+
+        // 更新或保存
+        return $Teacher->validate(true)->save();
     }
 }

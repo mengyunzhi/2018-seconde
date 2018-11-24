@@ -27,8 +27,21 @@ class LoginController extends controller
          return $this->fetch();
     }
 
+    // 注销
+    public function logOut()
+    {
+        if (Teacher::logOut()) {
+            return $this->success('logout success', url('index'));
+        } else {
+            return $this->error('logOut error', url('index'));
+        }
+    }
+
+    
+    // 代码
     public function test()
     {
-        echo Teacher::encryptPassword('123');
+        $hello = ['hello'];
+        echo Teacher::encryptPassword($hello);
     }
 }
