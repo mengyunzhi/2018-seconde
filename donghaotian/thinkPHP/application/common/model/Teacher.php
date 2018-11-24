@@ -93,4 +93,23 @@ class Teacher extends Model
             return false;        
          } 
     }
+
+    /**
+     * 对数据进行保存或更新
+     * @param    Teacher                  &$Teacher 教师
+     * @return   bool                             
+     * @author 梦云智 http://www.mengyunzhi.com
+     * @DateTime 2016-10-24T15:24:29+0800
+     */
+    private function saveTeacher(Teacher &$Teacher)
+    {
+        // 写入要更新的数据
+        $Teacher->name = input('post.name');
+        $Teacher->username = input('post.username');
+        $Teacher->sex = input('post.sex/d');
+        $Teacher->email = input('post.email');
+
+        // 更新或保存
+        return $Teacher->validate(true)->save();
+    }
 }
