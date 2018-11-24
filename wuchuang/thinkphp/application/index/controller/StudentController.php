@@ -27,6 +27,7 @@ class StudentController extends IndexController
         $this->assign('klasses', $klasses);
 
         $this->assign('Student', $Student);
+
         return $this->fetch();
     }
 }
