@@ -1,232 +1,73 @@
+#include <iostream>
 #include "HuffmanTree.h"
-
-HuffmanTree::HuffmanTree(int leaf_number)
+using namespace std;
+void menu();
+void print();//æ˜¾ç¤ºcodefileå†…å®¹
+int main()
 {
-	this->leaf_number = leaf_number;
-	// Êı×éµÚÒ»¸öÔªËØÎª¿Õ£¬´ÓÏÂ±ê1¿ªÊ¼´æ´¢
-	Node nullNode;
-	huTree.push_back(nullNode);
-
-	// ¶ÁÈë×Ö·ûºÍÈ¨£¬×÷Îª¹ş·òÂüÊ÷µÄÒ¶×Ó½Úµã
-	for (int i = 0; i < leaf_number; i++) {
-		char code;
-		int weight;
-		scanf("%c, %d,",&code,&weight);
-		Node node(code, weight);
-		huTree.push_back(node);
-	}
-}
-
-void HuffmanTree::generateHuCode()
-{
-	for (size_t i = 0; i < leaf_number - 1; i++)
+	HuffmanTree huffmanTree;
+	bool onOff = true;
+	while (onOff)
 	{
-		// Ñ°ÕÒ¹ş·òÂüÊ÷ÖĞÈ¨Öµ×îĞ¡µÄÁ½¸ö½ÚµãµÄÎ»ÖÃ
-		int mPos1 = findMinLeaf();
-		int mPos2 = findMinLeaf();
-
-		// ½«ÕâÁ½¸öÈ¨×îĞ¡µÄ½ÚµãµÄ¸¸½ÚµãÖÃÎªĞÂ½Úµã
-		huTree[mPos1].parent = huTree[mPos2].parent = huTree.size();
-
-		// ĞÂ½¨Ò»¸ö½Úµã×÷Îª¸¸½Úµã
-		Node parentNode;
-		// ½«Á½¸ö×îĞ¡½ÚµãµÄÎ»ÖÃ×÷Îª¸¸½ÚµãµÄ×óÓÒº¢×Ó
-		parentNode.lchild = mPos1;
-		parentNode.rchild = mPos2;
-		// ½«×óÓÒº¢×Ó½ÚµãµÄÈ¨ÖØºÍ×÷Îª¸¸½ÚµãµÄÈ¨ÖØ
-		parentNode.weight = huTree[mPos1].weight + huTree[mPos2].weight;
-
-		// ½«¸¸½Úµã´æµ½¹ş·òÂüÊ÷µ±ÖĞ
-		huTree.push_back(parentNode);
-	}
-}
-
-void HuffmanTree::saveHuTree()
-{
-	ofstream hfmTree;
-	// ´ò¿ªÎÄ¼ş
-	hfmTree.open("hfmTree.txt", ios::in | ios::trunc);
-	// ¶ÁĞ´ÎÄ¼ş
-	if (hfmTree.is_open())
-	{
-		// ±íÍ·
-		hfmTree << "position\tdata\tweight\tparent\tlchild\trchild\n";
-		// ±íÄÚÈİ
-		for (int i = 1; i < huTree.size(); i++) {
-			hfmTree << i << "\t";
-			hfmTree << huTree[i].code << "\t";
-			hfmTree << huTree[i].weight << "\t";
-			hfmTree << huTree[i].parent << "\t";
-			hfmTree << huTree[i].lchild << "\t";
-			hfmTree << huTree[i].rchild << "\t" << "\n";
+		menu();
+		char option = '0';
+		cin >> option;
+		switch (option) {
+		case 'A': {
+			// åˆå§‹åŒ–å“ˆå¤«æ›¼æ ‘
+			huffmanTree.Initialization();
+			// ä¿å­˜å“ˆå¤«æ›¼æ ‘å’Œå“ˆå¤«æ›¼ç¼–ç åˆ°æ–‡ä»¶ä¸­
+			huffmanTree.saveHuTree();
+			huffmanTree.saveHuCode();
+			break;
 		}
-		hfmTree.close();
-	}
-}
+		case 'B': { huffmanTree.codeing(); break; } // ç¼–ç 
 
-void HuffmanTree::saveHuCode()
-{
-	ofstream hfmTree;
-	// ´ò¿ªÎÄ¼ş
-	hfmTree.open("hfmCode.txt", ios::in | ios::trunc);
-	// ¶ÁĞ´ÎÄ¼ş
-	if (hfmTree.is_open())
-	{
-		map<char, string>::iterator it;
-		for (it = huCode.begin(); it != huCode.end(); it++)
-			hfmTree << (*it).first << ":" << (*it).second << "\n";
-		hfmTree.close();
-	}
-}
-
-void HuffmanTree::enCoding()
-{
-	for (int i = 1; i <= leaf_number; i++)
-	{
-		// Ñ°ÕÒÒ¶×Ó½ÚµãµÄ¸¸½ÚµãÎ»ÖÃ
-		int leaf = i;
-		int parent = huTree[i].parent;
-		string code;
-		// ´ÓÒ¶×Ó½Úµã³ö·¢£¬Ñ°ÕÒ¸ù½Úµã£¬×óÎª0£¬ÓÒÎª1
-		while (parent) {
-			if (huTree[parent].lchild == leaf) {
-				code += '0';
-			} else {
-				code += '1';
-			}
-			leaf = parent;
-			parent = huTree[parent].parent;		
+		case 'C': { huffmanTree.deCoding(); break; } // è¯‘ç 
+		case 'D': { print(); break; }				// æ‰“å°ä»£ç æ–‡ä»¶
+		case 'E': {
+			// ä»¥å‡¹å…¥è¡¨è¾“å‡ºå“ˆå¤«æ›¼æ ‘å¹¶å­˜åˆ°æ–‡ä»¶ä¸­
+			ofstream TreePrint;
+			TreePrint.open("TreePrint.txt", ios::in | ios::trunc);
+			int a = huffmanTree.getLeafNumber() * 2 - 1;
+			string str;
+			huffmanTree.treePrinting(a, str, TreePrint);
+			break;
 		}
-		// ½«±àÂëÄæÖÃµ÷Õû
-		reverse(code.begin(), code.end());
-		// ´æ´¢¹ş·òÂü±àÂë
-		huCode[huTree[i].code] = code;
+		case 'Q': { onOff = false; break; }
+		}
 	}
+	return 0;
 }
 
-void HuffmanTree::codeing()
+void menu()
 {
-	ifstream ToBeTran;
-	string input;
-	string output;
-	// ´ò¿ªÎÄ¼ş
-	ToBeTran.open("ToBeTran.txt");
-	// ¶ÁÎÄ¼ş
-	if (ToBeTran.is_open()) {
-		getline(ToBeTran, input);
-		// »ñÈ¡¶ÔÓ¦µÄ±àÂë£¬´æ·Åµ½outputÖĞ
-		for (int i = 0; i < input.size(); i++) {
-			output += huCode[input[i]];
-		}
-		// ¹Ø±ÕÎÄ¼ş
-		ToBeTran.close();
-	}
-
-	// ´ò¿ªÎÄ¼ş
-	ofstream CodeFile;
-	CodeFile.open("CodeFile.txt", ios::in | ios::trunc);
-	if (CodeFile.is_open()) {
-		// ½«±àÂë½á¹ûĞ´ÈëÎÄ¼ş
-		CodeFile << output;
-		// ¹Ø±ÕÎÄ¼ş
-		CodeFile.close();
-	}
-	// ´òÓ¡±àÂë½á¹û
-	for (int i = 0; i < output.size(); i++){
-		// Ã¿50¸ö×Ö·û»»ĞĞ
-		if (i%50 == 0 && i >= 50){
-			cout << '\n';
-		}
-		cout << output[i];
-	}
-	cout << endl;
+	cout << "è¯·é€‰æ‹©ï¼š" << endl;
+	cout << "A:åˆå§‹åŒ–\tB:ç¼–ç \tC:è¯‘ç \tD:æ‰“å°ä»£ç æ–‡ä»¶\nE:æ‰“å°å“ˆå¤«æ›¼æ ‘(å‡¹å…¥è¡¨)\tQ:é€€å‡º" << endl;
 }
 
-void HuffmanTree::deCoding()
+void print()
 {
 	ifstream CodeFile;
-	string input;
-	string output;
-	int start = 0;
-	int length = 1;
-	// ´ò¿ªÎÄ¼ş
+	ofstream CodePrint;
+	// æ‰“å¼€æ–‡ä»¶
 	CodeFile.open("CodeFile.txt");
-	// ¶ÁÎÄ¼ş
+	CodePrint.open("CodePrint.txt", ios::in | ios::trunc);
+	// è¯»æ–‡ä»¶
 	if (CodeFile.is_open()) {
-		CodeFile >> input;
-		// »ñÈ¡¶ÔÓ¦µÄ±àÂë£¬´æ·Åµ½outputÖĞ
-		for (int i = 0; i < input.size(); i++) {
-			string sub = input.substr(start, length);
-			char key = '0';
-			if (findKeyByValue(sub, key)) {
-				output += key;
-				start = i + 1;
-				length = 1;
+		string content;
+		getline(CodeFile, content);
+		for (int i = 0; i < content.size(); i++) {
+			if (i % 50 == 0 && i >= 50) {
+				CodePrint << '\n';
+				cout << endl;
 			}
-			else { length++; }
+			CodePrint << content[i];
+			cout << content[i];
 		}
-		// ¹Ø±ÕÎÄ¼ş
+		cout << endl;
+		// å…³é—­æ–‡ä»¶
 		CodeFile.close();
+		CodePrint.close();
 	}
-
-	// ´ò¿ªÎÄ¼ş
-	ofstream TextFile;
-	TextFile.open("TextFile.txt", ios::in | ios::trunc);
-	if (TextFile.is_open()) {
-		// ½«±àÂë½á¹ûĞ´ÈëÎÄ¼ş
-		TextFile << output;
-		// ¹Ø±ÕÎÄ¼ş
-		TextFile.close();
-	}
-}
-
-int HuffmanTree::findMinLeaf()
-{
-	int min = 999;
-	int position = 999;
-	// ½«µÚÒ»¸öÒ¶×Ó½ÚµãµÄÈ¨ºÍÎ»ÖÃ×÷ÎªÈ¨Öµ×îĞ¡µÄÈ¨ºÍÎ»ÖÃ
-	for (int i = 1; i < huTree.size() && huTree[i].parent == 0; i++)
-	{
-		min = huTree[1].weight;
-		position = 1;
-	}
-
-	for (int i = 2; i < huTree.size(); i++) {
-		// µ±½ÚµãµÄÈ¨ÖµĞ¡ÓÚ×îĞ¡µÄÈ¨ÖµÇÒÎŞ¸¸½Úµã£¨Ò¶×Ó½Úµã£©Ê±
-		// ½«´Ë½ÚµãµÄÈ¨×÷Îª×îĞ¡È¨£¬²¢±£´æ¸Ã½ÚµãµÄÎ»ÖÃ
-		if (huTree[i].weight < min && huTree[i].parent == 0) {
-			min = huTree[i].weight;
-			position = i;
-		}
-	}
-	// ½«×îĞ¡½ÚµãµÄ¸¸½Úµã¸³ÖµÎª-1£¬×÷ÎªÒÑ±»ËÑË÷µÄ±êÖ¾
-	huTree[position].parent = -1;
-	// ·µ»Ø×îĞ¡½ÚµãµÄÎ»ÖÃ
-	return position;
-}
-
-void HuffmanTree::treePrinting(int & postion, string str)
-{
-	if (huTree[postion].weight == 0) {
-		return;
-	}
-	str += "   ";
-	treePrinting(huTree[postion].rchild, str);
-	cout << str << huTree[postion].weight<<endl;
-	treePrinting(huTree[postion].lchild, str);
-}
-
-bool HuffmanTree::findKeyByValue(string value, char & key)
-{
-	// ¶¨ÒåÒ»¸ömapµü´úÆ÷£¬ÓÃÀ´²éÑ¯map
-	std::map<char, string>::iterator it;
-	// ¸ù¾İvalue²éÑ¯mapµÄkey
-	for (it = huCode.begin(); it != huCode.end(); ++it) {
-		// ³É¹¦µÃµ½key£¬·µ»Øtrue£¬Ê§°Ü·µ»Øfalse
-		if (it->second == value) {
-			key = it->first;
-			return true;
-		}
-	}
-	return false;
 }
