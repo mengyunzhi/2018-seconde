@@ -30,18 +30,19 @@ private:
 class HuffmanTree
 {
 public:
-	HuffmanTree(int leaf_number);	// ½«¼üÅÌ¶ÁÈëµÄ×Ö·û¼°È¨´æµ½huTreeÖĞ
-	void generateHuCode();			// Éú³É¹ş·òÂüÊ÷
-	void saveHuTree();				// ½«¹ş·òÂüÊ÷´æµ½ÎÄ¼şµ±ÖĞ
-	void saveHuCode();				// ½«¹ş·òÂü±àÂë´æµ½ÎÄ¼şµ±ÖĞ
-	void enCoding();				// Éú³É¹ş·òÂü±àÂë±í
-	void codeing();					// ±àÂë
-	void deCoding();				// ÒëÂë
-	int findMinLeaf();				// Ñ°ÕÒÈ¨Öµ×îĞ¡µÄÒ¶×Ó½Úµã£¬²¢·µ»ØËüµÄÎ»ÖÃ
-	void treePrinting(int & postion, string str);// Ö±¹ÛµØÏÔÊ¾¹ş·òÂüÊ÷
+	void Initialization();			// åˆå§‹åŒ–,å°†é”®ç›˜è¯»å…¥çš„å­—ç¬¦åŠæƒå­˜åˆ°huTreeä¸­
+	void generateHuCode();			// ç”Ÿæˆå“ˆå¤«æ›¼æ ‘
+	void saveHuTree();				// å°†å“ˆå¤«æ›¼æ ‘å­˜åˆ°æ–‡ä»¶å½“ä¸­
+	void saveHuCode();				// å°†å“ˆå¤«æ›¼ç¼–ç å­˜åˆ°æ–‡ä»¶å½“ä¸­
+	void enCoding();				// ç”Ÿæˆå“ˆå¤«æ›¼ç¼–ç è¡¨
+	void codeing();					// ç¼–ç 
+	void deCoding();				// è¯‘ç 
+	int findMinLeaf();				// å¯»æ‰¾æƒå€¼æœ€å°çš„å¶å­èŠ‚ç‚¹ï¼Œå¹¶è¿”å›å®ƒçš„ä½ç½®
+	void treePrinting(int & postion, string str, ofstream & file);// ç›´è§‚åœ°æ˜¾ç¤ºå“ˆå¤«æ›¼æ ‘
+	int getLeafNumber();
 	bool findKeyByValue(string value, char & key);
 private:
-	vector<Node> huTree;// ¹ş·òÂüÊ÷
-	map<char, string> huCode;// ¹ş·òÂü±àÂë,charÎª×Ö·û£¬stringÎª¶ÔÓ¦µÄ±àÂë
+	vector<Node> huTree;			// å“ˆå¤«æ›¼æ ‘
+	map<char, string> huCode;		// å“ˆå¤«æ›¼ç¼–ç ,charä¸ºå­—ç¬¦ï¼Œstringä¸ºå¯¹åº”çš„ç¼–ç 
 	int leaf_number;
 };
