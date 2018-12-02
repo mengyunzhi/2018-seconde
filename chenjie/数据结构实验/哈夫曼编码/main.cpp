@@ -1,24 +1,73 @@
 #include <iostream>
 #include "HuffmanTree.h"
 using namespace std;
+void menu();
+void print();//æ˜¾ç¤ºcodefileå†…å®¹
 int main()
-{ 
-	// ³õÊ¼»¯¹ş·òÂüÊ÷
-	HuffmanTree huffmanTree(27);
-	// Éú³É¹ş·òÂüÊ÷
-	huffmanTree.generateHuCode();
-	// Éú³É¹ş·òÂü±àÂë
-	huffmanTree.enCoding();
-	// ±£´æ¹ş·òÂüÊ÷ºÍ¹ş·òÂü±àÂëµ½ÎÄ¼şÖĞ
-	huffmanTree.saveHuTree();
-	huffmanTree.saveHuCode();
-	// ±àÂë
-	huffmanTree.codeing();
-	// ÒëÂë
-	huffmanTree.deCoding();
-	// ÒÔ°¼Èë±íÊä³ö¹ş·òÂüÊ÷
-	int a = 53;
-	string str;
-	huffmanTree.treePrinting(a, str);
+{
+	HuffmanTree huffmanTree;
+	bool onOff = true;
+	while (onOff)
+	{
+		menu();
+		char option = '0';
+		cin >> option;
+		switch (option) {
+		case 'A': {
+			// åˆå§‹åŒ–å“ˆå¤«æ›¼æ ‘
+			huffmanTree.Initialization();
+			// ä¿å­˜å“ˆå¤«æ›¼æ ‘å’Œå“ˆå¤«æ›¼ç¼–ç åˆ°æ–‡ä»¶ä¸­
+			huffmanTree.saveHuTree();
+			huffmanTree.saveHuCode();
+			break;
+		}
+		case 'B': { huffmanTree.codeing(); break; } // ç¼–ç 
+
+		case 'C': { huffmanTree.deCoding(); break; } // è¯‘ç 
+		case 'D': { print(); break; }				// æ‰“å°ä»£ç æ–‡ä»¶
+		case 'E': {
+			// ä»¥å‡¹å…¥è¡¨è¾“å‡ºå“ˆå¤«æ›¼æ ‘å¹¶å­˜åˆ°æ–‡ä»¶ä¸­
+			ofstream TreePrint;
+			TreePrint.open("TreePrint.txt", ios::in | ios::trunc);
+			int a = huffmanTree.getLeafNumber() * 2 - 1;
+			string str;
+			huffmanTree.treePrinting(a, str, TreePrint);
+			break;
+		}
+		case 'Q': { onOff = false; break; }
+		}
+	}
 	return 0;
+}
+
+void menu()
+{
+	cout << "è¯·é€‰æ‹©ï¼š" << endl;
+	cout << "A:åˆå§‹åŒ–\tB:ç¼–ç \tC:è¯‘ç \tD:æ‰“å°ä»£ç æ–‡ä»¶\nE:æ‰“å°å“ˆå¤«æ›¼æ ‘(å‡¹å…¥è¡¨)\tQ:é€€å‡º" << endl;
+}
+
+void print()
+{
+	ifstream CodeFile;
+	ofstream CodePrint;
+	// æ‰“å¼€æ–‡ä»¶
+	CodeFile.open("CodeFile.txt");
+	CodePrint.open("CodePrint.txt", ios::in | ios::trunc);
+	// è¯»æ–‡ä»¶
+	if (CodeFile.is_open()) {
+		string content;
+		getline(CodeFile, content);
+		for (int i = 0; i < content.size(); i++) {
+			if (i % 50 == 0 && i >= 50) {
+				CodePrint << '\n';
+				cout << endl;
+			}
+			CodePrint << content[i];
+			cout << content[i];
+		}
+		cout << endl;
+		// å…³é—­æ–‡ä»¶
+		CodeFile.close();
+		CodePrint.close();
+	}
 }
