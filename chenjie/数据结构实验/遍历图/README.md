@@ -1,16 +1,27 @@
 ### 图遍历的演示 ###
-【问题描述】
+【问题描述】  
+
 以邻接多重表为存储结构，实现连通无向图的深度优先和广度优先遍历。以用户指定的结点为起点，分别输出每种遍历下的结点访问序列和相应生成树的边集。
-【要求】
+
+【要求】  
+
 设图的结点不超过30个，每个结点用一个编号表示（如果一个图有n个结点，则它们的编号分别为1，2，…，n）。通过输入图的全部边输入一个图，每个边为一个数对，可以对边的输入顺序作出某种限制。
 输入：第一行输入图的顶点数n和边数m，此后m行通过输入边连接的两个顶点编号来输入边，最后一行输入要遍历的节点编号
-示例：
-示例图如下：
-1 &nbsp;  —— &nbsp; 2</ br>
-| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / &nbsp; |</ br>
-| &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; |</ br>
-| &nbsp; &nbsp; / &nbsp; &nbsp; \\ &nbsp;  |</ br>
-4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  5</ br>
+
+示例：  
+
+示例图如下：  
+
+1 &nbsp;  —— &nbsp; 2
+
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / &nbsp; |
+
+| &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; |
+
+| &nbsp; &nbsp; / &nbsp; &nbsp; \\ &nbsp;  |
+
+4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  5
+
 
     // 输入节点数和边数
     5 6
