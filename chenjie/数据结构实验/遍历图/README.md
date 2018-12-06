@@ -6,11 +6,11 @@
 输入：第一行输入图的顶点数n和边数m，此后m行通过输入边连接的两个顶点编号来输入边，最后一行输入要遍历的节点编号
 示例：
 示例图如下：
-1 &nbsp;  —— &nbsp; 2
-| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / &nbsp; |
-| &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; |
-| &nbsp; &nbsp; / &nbsp; &nbsp; \\ &nbsp;  |
-4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  5
+1 &nbsp;  —— &nbsp; 2</ br>
+| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; / &nbsp; |</ br>
+| &nbsp; &nbsp; &nbsp; 3 &nbsp; &nbsp; |</ br>
+| &nbsp; &nbsp; / &nbsp; &nbsp; \\ &nbsp;  |</ br>
+4 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  5</ br>
 
     // 输入节点数和边数
     5 6
