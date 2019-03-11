@@ -1,0 +1,4 @@
+<!-- this is teacher list -->
+<label for="name" class="col-sm-2 control-label">教师</label>
+<div class="col-sm-10">
+  <select name="teacherId" id="teacherId" ng-options="_teacher.name for _teacher in teachers track by _teacher.id" ng-model="data.teacher"></select>
